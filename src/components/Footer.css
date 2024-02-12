@@ -3,8 +3,12 @@
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 10%;
+    margin-top: 15%;
 
+}
+
+.contact-details p {
+    color: rgb(173, 169, 169);
 }
 
 .contact-details {
