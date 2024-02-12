@@ -1,0 +1,82 @@
+body {
+    background-image: url('/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+h1 {
+    margin-left: 400px;
+    margin-top: 10%;
+    color: #7890e5;
+}
+
+p {
+    margin-left: 400px;
+    color: rgb(0, 0, 0);
+}
+
+.signinbtn {
+    background-color: #423fe5;
+}
+
+.dictionarybtn {
+    background-color: #908fda;
+}
+
+.signinbtn {
+    padding: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 400px;
+    margin-top: 70px;
+    border-radius: 30px;
+    width: 100px;
+}
+
+.signinbtn:hover {
+    background-color: #1565c0;
+}
+
+.signinbtn:active {
+    background-color: #0d47a1;
+}
+
+.dictionarybtn {
+    padding: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 400px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.dictionarybtn:hover {
+    background-color: #45a6c4;
+}
+
+.dictionarybtn:active {
+    background-color: #566bb8;
+}
+
+.main-page {
+    position: relative;
+}
+
+.main-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(120, 117, 117, 0.3);
+    z-index: -1;
+}
