@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FaInstagram, FaFacebook } from 'react-icons/fa'; 
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="contact-details">
                 <p>&copy; 2024 SignLearning. All rights reserved.</p>
                 <p>
-                    Follow us on:<br></br>
+                    Follow us on:
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
 

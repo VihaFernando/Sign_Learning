@@ -1,11 +1,15 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(207, 202, 202, 0.8);
+    background-color: rgba(207, 202, 202, 1.0);
     color: white;
-
+    z-index: 1000;
 }
 
 .logo {
@@ -32,13 +36,14 @@
 }
 
 .menu button {
-    padding: 10px;
+
     background-color: #6c81f0;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 20px;
-    width: 100px;
+    width: 80px;
+    height: 28px;
 }
 
 .menu button:hover {
