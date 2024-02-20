@@ -5,6 +5,8 @@ import './App.css';
 import MainPage from './components/MainPage';
 import Homepage from './components/Homepage';
 
+
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/home" element={<Homepage />} />
+         
+
         </Routes>
       </div>
     </Router>
