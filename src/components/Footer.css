@@ -1,0 +1,28 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15%;
+
+}
+
+.contact-details p {
+    color: rgb(173, 169, 169);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-details p {
+    margin: 5px;
+}
+
+.contact-details a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+}
