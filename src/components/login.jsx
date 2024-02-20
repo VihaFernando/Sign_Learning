@@ -59,6 +59,11 @@ const Login = ({ onLogin }) => {
       <a class="su" href="#SignUp">   Signup</a>
       </h4>
       </div>
+      {user && (
+        <div>
+          <p>Welcome, {user}!</p>
+        </div>
+      )}
     </form>
     </div>
     </div>
