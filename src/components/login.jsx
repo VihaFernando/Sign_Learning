@@ -6,6 +6,8 @@ import { FaGoogle } from 'react-icons/fa';
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState(null);
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const Login = ({ onLogin }) => {
  
     if (username && password) {
       onLogin(username);
+      setUser(username);
     } else {
       alert('Invalid username or password');
     }
@@ -59,6 +62,11 @@ const Login = ({ onLogin }) => {
       <a class="su" href="#SignUp">   Signup</a>
       </h4>
       </div>
+      {user && (
+        <div>
+          <p>Welcome, {user}!</p>
+        </div>
+      )}
     </form>
     </div>
     </div>
