@@ -32,7 +32,7 @@ function Lessons() {
 
   return (
     <div>
-      <h1>Lessons</h1>
+      <h1 class ="topic">Lessons</h1>
       <section className="lessons-section">
         <div className="container">
           <div className="cards">
