@@ -23,6 +23,7 @@ const Login = () => {
   };
 
   return (
+    <body className={LoginCSS.body}>
     <div className={LoginCSS.pic}>
       <div className={LoginCSS.frame}>
         <form onSubmit={handleLogin}>
@@ -35,13 +36,14 @@ const Login = () => {
             <a href="#about">About</a>
           </div>
           <div className={LoginCSS.blueBox}>
-            <h2>
+            <h2 className={LoginCSS.h2}>
               Welcome to SignLearning<span role="img" aria-label="peace hand">&#x270B;</span>
             </h2>
             <div className="input-container">
               <label></label>
               <input
                 type="text"
+                className={LoginCSS.input}
                 value={username}
                 placeholder="&#x1F464;  Enter Username"
                 onChange={(e) => setUsername(e.target.value)}
@@ -52,6 +54,7 @@ const Login = () => {
               <label></label>
               <input
                 type="password"
+                className={LoginCSS.input}
                 value={password}
                 placeholder="&#x1F512;  Enter Password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -62,14 +65,14 @@ const Login = () => {
               Login
             </button>
             <br />
-            <h3>OR LOGIN WITH</h3>
+            <h3 className={LoginCSS.h3}>OR LOGIN WITH</h3>
             <br />
             <div className="input-container">
               <button type="submit" className={LoginCSS.gog}>
                 <FaGoogle className={LoginCSS.icon} /> Google
               </button>
             </div>
-            <h4>
+            <h4 className={LoginCSS.h4}>
               Not a member ?<a className="su" href="#SignUp">
                 Signup
               </a>
@@ -78,6 +81,7 @@ const Login = () => {
         </form>
       </div>
     </div>
+    </body>
   );
 };
 
