@@ -10,12 +10,9 @@
   
 }
 
-
 .body{
   font-family: "Times New Roman", Times, serif;
-
 }
-
 
 .topnav a { 
   color: white;
@@ -49,9 +46,6 @@
   padding-left: 50px;
  margin-top: -1.5px;
  padding-top: 30px;
- background-color: none;
- 
- 
  
 }
 
@@ -88,7 +82,7 @@ padding-left: 30px;
 }
 
 
-.input-container{
+.container{
 
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -181,7 +175,7 @@ height: 530px;
 
 }
 .pic{
-background-image: url('/BG Image.png');
+background-image: url('../../public/BG Image.png');
 background-repeat: no-repeat;
 background-attachment: fixed; 
 background-size: 100% 100%;
@@ -262,6 +256,10 @@ margin-left: 40px;
   padding-bottom: 5px;
 }
 }
+
+
+
+
 
 
 
