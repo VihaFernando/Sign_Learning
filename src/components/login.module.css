@@ -10,9 +10,12 @@
   
 }
 
+
 .body{
   font-family: "Times New Roman", Times, serif;
+
 }
+
 
 .topnav a { 
   color: white;
@@ -46,6 +49,9 @@
   padding-left: 50px;
  margin-top: -1.5px;
  padding-top: 30px;
+ background-color: none;
+ 
+ 
  
 }
 
@@ -82,7 +88,7 @@ padding-left: 30px;
 }
 
 
-.container{
+.input-container{
 
   display: -ms-flexbox; /* IE10 */
   display: flex;
