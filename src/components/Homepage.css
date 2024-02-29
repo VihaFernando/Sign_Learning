@@ -1,20 +1,59 @@
 .home-page {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #eeeeee;
-}
-
-.home-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: rgb(202, 195, 195);
+    position: relative;
+    background-color: #eeeeee;
+
+}
+
+.intro-text {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.welcome_text {
+    color: #626193;
+    font-size: 50px;
+
+}
+
+.search-bar {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+
+
+.searchbar {
+    border-radius: 10px;
+    height: 40px;
+    width: 50%;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.welcome_Subtext {
+    text-align: left;
+    color: #5f5b5b;
+    font-size: 25px;
+    line-height: 1.4;
+
 }
 
 img {
     width: 400px;
-    height: 450px;
+    height: 420px;
     margin-top: 100px;
+    border-radius: 30px;
+
 }
 
 .main-content {
@@ -28,21 +67,16 @@ img {
 .right-content {
     width: 100%;
     max-width: 600px;
-    /* Adjust the max-width as needed */
     margin-top: 20px;
-    /* Add margin for spacing */
 }
 
-.intro-text,
-.search-bar {
-    margin-bottom: 20px;
+.left-content {
+    width: 100%;
+    margin-top: 100px;
 }
 
-.search-bar input {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
+
+
 
 .search-bar button {
     margin-left: 10px;

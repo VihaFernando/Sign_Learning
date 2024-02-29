@@ -6,8 +6,8 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="contact-details">
-                <p>&copy; 2024 SignLearning. All rights reserved.</p>
-                <p>
+                <p className='footerPtag'>&copy; 2024 SignLearning. All rights reserved.</p>
+                <p className='footerPtag'>
                     Follow us on:
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
