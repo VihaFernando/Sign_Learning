@@ -1,0 +1,28 @@
+/* LessonDetails.css */
+.lesson-details {
+    margin-top: 20px;
+
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-details {
+    width: calc(33.33% - 20px);
+    /* Adjust the width and margin as needed */
+    margin-bottom: 20px;
+}
+
+.marks-circle {
+    width: 100%;
+    max-width: 100px;
+    /* Set a maximum width for each circular progress bar */
+    margin: 0 auto;
+}
+
+h2 {
+    color: #3061b6;
+}

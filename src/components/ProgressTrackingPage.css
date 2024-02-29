@@ -1,0 +1,41 @@
+/* Global styles for larger screens */
+.progress-tracking {
+    background-color: #eeeeee;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.progress-sections {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .progress-tracking {
+        height: auto;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .progress-sections {
+        margin-top: 10px;
+    }
+}
+
+.body {
+    background-color: #eeeeee;
+}

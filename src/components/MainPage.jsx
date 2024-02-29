@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import './MainPage.css';
 import Footer from './Footer';
-
 
 const MainPage = () => {
     return (
@@ -14,7 +14,10 @@ const MainPage = () => {
                 <p>Explore and communicate <br></br>in a whole new way!</p>
             </div>
             <div className="action-buttons">
-                <button className='signinbtn'>Sign In</button><br></br>
+                <Link to="/signup">
+                    <button className='signinbtn'>Sign In</button>
+                </Link>
+                <br></br>
                 <button className='dictionarybtn'>Try Sign Dictionary</button>
             </div>
             <Footer />
