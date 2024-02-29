@@ -14,7 +14,7 @@ const ProgressSection = ({ title, progress }) => {
 
   return (
     <div className="progress-section" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-      <h3>{title}</h3>
+      <h3 class="progressTitle">{title}</h3>
       <div className="progress-bar">
         <div className="progress" style={{ width: `${progress}%` }}></div>
       </div>
