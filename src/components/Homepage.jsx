@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import MainHeader from './MainHeader';
 import './Homepage.css';
 import Footer from './Footer';
-import { storage } from './firebase';
+ import { storage, ref, getDownloadURL } from '../firebase';
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,19 +11,22 @@ const Homepage = () => {
 
   const handleSearch = async () => {
     try {
-      const storageRef = ref(Storage,`Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
-      const videoDownloadURL = await videoRef.getDownloadURL();
-      setVideoURL(videoDownloadURL);
-      setError('');
-    } catch (error) {
-      console.error('Error retrieving video:', error);
-      setVideoURL('');
-      setError('Video not found.');
+      const videoRef = storage.ref(`Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
+      if (storageRef) {
+        const url = await getDownloadURL(storageRef); // Use await to get the URL
+        setVideoUrl(url);
+    } else {
+        console.error('Storage reference is not properly initialized');
+        setVideoUrl('');
     }
-  };
-
+} catch (error) {
+    console.error('Error retrieving video:', error);
+    setVideoUrl(''); // Clear the video URL if an error occurs
+}
+};
+  
   const handleScanImage = async () => {
-
+  
     alert('Scanning...');
   };
 
