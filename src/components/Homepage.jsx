@@ -2,16 +2,16 @@ import React, { useState} from 'react';
 import MainHeader from './MainHeader';
 import './Homepage.css';
 import Footer from './Footer';
- import { storage, ref, getDownloadURL } from '../firebase';
+ import { storage, ref, getDownloadURL } from './firebase';
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [videoURL, setVideoURL] = useState('');
-  const [error, setError] = useState('');
+  const [videoURL, setVideoUrl] = useState('');
+  const [error] = useState('');
 
   const handleSearch = async () => {
     try {
-      const videoRef = storage.ref(`Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
+      const storageRef = ref(storage, `Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
       if (storageRef) {
         const url = await getDownloadURL(storageRef); // Use await to get the URL
         setVideoUrl(url);
