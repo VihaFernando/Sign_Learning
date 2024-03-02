@@ -8,7 +8,7 @@ import LessonDetails from './LessonDetails';
 
 const ProgressTrackingPage = () => {
     return (
-        <div class="body">
+        <div class="progressPage">
             <div className="progress-tracking">
                 <MainHeader />
                 <div className="content">

@@ -3,21 +3,25 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: white;
+    position: relative;
 
 }
 
-h1 {
-    margin-left: 400px;
-    margin-top: 10%;
+.welcome-text {
+    margin-top: 150px;
+}
+
+.wText {
+    margin-left: 25%;
     color: #7890e5;
 }
 
-p {
-    margin-left: 400px;
+.sText {
+    margin-left: 25%;
     color: rgb(0, 0, 0);
 }
 
@@ -34,7 +38,7 @@ p {
     color: white;
     border: none;
     cursor: pointer;
-    margin-left: 400px;
+    margin-left: 25%;
     margin-top: 70px;
     border-radius: 30px;
     width: 100px;
@@ -53,7 +57,7 @@ p {
     color: white;
     border: none;
     cursor: pointer;
-    margin-left: 400px;
+    margin-left: 25%;
     margin-top: 40px;
     border-radius: 30px;
 }
@@ -68,4 +72,22 @@ p {
 
 .main-page {
     position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-page {
+        height: auto;
+    }
+
+    .wText,
+    .sText,
+    .signinbtn,
+    .dictionarybtn {
+        margin-left: 10%;
+    }
+
+    .signinbtn,
+    .dictionarybtn {
+        width: 100px;
+    }
 }
