@@ -1,8 +1,8 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import MainHeader from './MainHeader';
 import './Homepage.css';
 import Footer from './Footer';
-import { storage } from './firebase'; 
+import { storage } from './firebase';
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +11,7 @@ const Homepage = () => {
 
   const handleSearch = async () => {
     try {
-      const videoRef = storage.ref(`Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
+      const storageRef = ref(Storage,`Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
       const videoDownloadURL = await videoRef.getDownloadURL();
       setVideoURL(videoDownloadURL);
       setError('');
@@ -21,9 +21,9 @@ const Homepage = () => {
       setError('Video not found.');
     }
   };
-  
+
   const handleScanImage = async () => {
-  
+
     alert('Scanning...');
   };
 
