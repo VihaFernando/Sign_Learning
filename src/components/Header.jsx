@@ -15,8 +15,8 @@ const Header = () => {
     <div className="header">
       <div className="logo">SignLearning</div>
       <div className="menu">
-        <a href="#About">About Us</a>
-        <a href="#Contact">Contact</a>
+        <a href="/AboutUs">About Us</a>
+        <a href="/ContactUs">Contact</a>
         <button className="login-button" onClick={handleLoginButtonClick}>
           Login
         </button>
