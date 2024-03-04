@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import LoginCSS from './login.module.css';
 import { FaGoogle } from 'react-icons/fa';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth, database } from "./firebase";
+import { auth, database } from "./firebase"; 
+
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -10,7 +11,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
+git 
     signInWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // You might want to do something with userCredential.user
