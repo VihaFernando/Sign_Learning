@@ -4,13 +4,14 @@ import { FaGoogle } from 'react-icons/fa';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth, database } from "./firebase"; 
 
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-
+git 
     signInWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // You might want to do something with userCredential.user
