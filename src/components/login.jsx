@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-git 
+ 
     signInWithEmailAndPassword(auth, username, password)
       .then((userCredential) => {
         // You might want to do something with userCredential.user
