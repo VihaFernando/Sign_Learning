@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './AboutUs.css';
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
+import Header from './Header';
+import Footer from './Footer';
 
 function AboutUs() {
     const [showMissionVision, setShowMissionVision] = useState(false);
@@ -17,6 +19,7 @@ function AboutUs() {
 
     return (
         <div>
+            <Header/>
             <h1>About Us</h1>
             <div className="description-section">
                 <div className="image-frame">
@@ -94,6 +97,7 @@ function AboutUs() {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     );
 }

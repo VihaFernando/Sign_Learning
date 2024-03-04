@@ -1,227 +1,240 @@
 body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-  }
-  
-  .first-heading {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
 
-  .navbar {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
+}
+
+.first-heading {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  height: 200px;
+  padding-top: 10px;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .navbar a {
-    text-decoration: none;
-    padding: 10px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .left-links a {
-    color: #6f6aa4;
-    font-size: 30px;
-    font-weight: 600;
+  color: #6f6aa4;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .right-links a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 
 .right-links a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-  .waveHand {
-    width: 50px;
-  }
-  
-  h3 {
-    font-size: 10px;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  h6 {
-    font-size: 9px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 5px;
-  }
-  .Topic{
-    font-size: 25px;
-    margin-bottom:10px ;
-  }
-  
-  .input-box input {
-    width: 100%;
-    height: 1;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 12px;
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-  }
-  
-  .input-box input::placeholder {
-    color: #000;
-  }
-  
-  .input-email input,
-  .input-contact input,
-  .input-password input {
-    width: 100%;
-    height: 1;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 12px;
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .input-email input::placeholder,
-  .input-contact input::placeholder,
-  .input-password input::placeholder {
-    color: #000;
-  }
-  
-  
-  .input-with-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .input-with-icon .icon {
-    position: absolute;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: gray;
-  }
-  
-  .input-email .input-with-icon .icon {
-    font-size: 18px;
-    top: 120;
-  }
-  
-  .input-contact .input-with-icon .icon {
-    font-size: 18px;
-    top: 120;
-  }
-  
-  .input-password .input-with-icon .icon {
-    font-size: 17px;
-  }
-  
-  .register-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin-top: 5px;
-  }
-  
-  .register-link p a {
-    color: #3E3CDE;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .register-link p a:hover {
-    text-decoration: underline;
-  }
-  
-  .login-button {
-    width: 100%;
-    height: 30px;
-    background: #3E3CDE;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 12px;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 5px;
-    right: 100px;
-  }
-  
-  .login-button:hover {
-    background-color: #657EFC;
-  }
-  
-  .google-button {
-    width: 100%;
-    height: 30px;
-    background: #fff;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 12px;
-    color: #000;
-    font-weight: 700;
-    margin-top: 0px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .google-button:hover {
-    background-color: #657EFC;
-  }
-  .google-button:active{
-    background-color: #3d5aea;
-  
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .signup-box {
-    width: 340px;
-    padding: 20px;
-    background-color: #657EFC;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    align-items: center;
-    margin-left: 30px;
+.waveHand {
+  width: 50px;
+  height: 50px;
+  margin-top: 5%;
 }
-  
+
+h3 {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h6 {
+  font-size: 9px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  color:#fff;
+}
+
+.Topic {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.topic_2 {
+  font-size: 14px;
+margin-top: 20px;
+  color: #fff;
+}
+
+.input-box input {
+  width: 100%;
+  height: 1;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+
+}
+
+.input-box input::placeholder {
+  color: #000;
+}
+
+.input-email input,
+.input-contact input,
+.input-password input {
+  width: 100%;
+  height: 1;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.input-email input::placeholder,
+.input-contact input::placeholder,
+.input-password input::placeholder {
+  color: #000;
+}
+
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.input-with-icon .icon {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: gray;
+}
+
+.input-email .input-with-icon .icon {
+  font-size: 18px;
+  top: 120;
+}
+
+.input-contact .input-with-icon .icon {
+  font-size: 18px;
+  top: 120;
+}
+
+.input-password .input-with-icon .icon {
+  font-size: 17px;
+}
+
+.register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.register-link p a {
+  color: #3E3CDE;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  height: 30px;
+  background: #3E3CDE;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 5px;
+  right: 100px;
+}
+
+.login-button:hover {
+  background-color: #657EFC;
+}
+
+.google-button {
+  width: 100%;
+  height: 30px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 12px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 0px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-button:hover {
+  background-color: #657EFC;
+}
+
+.google-button:active {
+  background-color: #3d5aea;
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.signup-box {
+  width: 340px;
+  padding: 20px;
+  background-color: #657EFC;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  align-items: center;
+  margin-left: 30px;
+}
+
 .signup-box form {
   display: flex;
   flex-direction: column;
@@ -230,74 +243,84 @@ body {
 .signup-box label {
   margin-bottom: 10px;
 }
-  
-  .container_1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    background: rgba(255, 255, 255, .4);
-    padding: 20px;
-    border-radius: 10px;
-    height: auto;
-  }
-  
-  .icon_1 {
-    font-size: 15px;
-    margin-right: 10px;
-  }
-  
-  .text_1 {
-    position: absolute;
-    bottom: 40%;
-    left: 70%;
-    transform: translateX(-50%);
-    color: #000;
-    width: 80%;
-    max-width: 600px; 
-    text-align: center;
-    overflow: none;
-  }
-  
-  .text_1 .intro-heading {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 20px;
-    color: black;
-    
-  }
-  
-  .text_1 .intro {
-    color: black;
-    font-size: 23px;
-    margin-top: 20px;
-  }
-  @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: row; 
-        justify-content: space-between; 
-        position: fixed; 
-        top: 0;
-        width: 100%;
-        z-index: 1000; 
-    }
 
-    .right-links {
-        display: flex; 
-        align-items: center; 
-        margin-top: 10px; 
-        margin-right: 10px;
-    }
+.container_1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background: rgba(255, 255, 255, .4);
+  padding: 20px;
+  border-radius: 10px;
+  height: auto;
+}
 
-    .signup-box {
-        width: 8=70%;
-        max-width: none;
-        margin-top: 50px;
-    }
-    .text_1{
-      display: none;
-    }
+.icon_1 {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.text_1 {
+  position: absolute;
+  bottom: 40%;
+  left: 70%;
+  transform: translateX(-50%);
+  color: #000;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  overflow: none;
+}
+
+.text_1 .intro-heading {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  color: black;
+
+}
+
+.text_1 .intro {
+  color: black;
+  font-size: 23px;
+  margin-top: 20px;
 }
 
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .right-links {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .signup-box {
+    width: 8=70%;
+    max-width: none;
+    margin-top: 50px;
+  }
+
+  .text_1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 560px){
+  .left-links{
+   font-size: small;
+  }
+  .right-links{
+    display: none;
+  }
+  
+  }
