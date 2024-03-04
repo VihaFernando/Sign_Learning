@@ -1,33 +1,45 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import MainHeader from './MainHeader';
 import './Homepage.css';
 import Footer from './Footer';
- import { storage, ref, getDownloadURL } from './firebase';
+import { storage, ref, getDownloadURL } from './firebase';
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [videoURL, setVideoUrl] = useState('');
-  const [error] = useState('');
+  const [error, setError] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchedWord, setSearchedWord] = useState('');
 
   const handleSearch = async () => {
     try {
       const storageRef = ref(storage, `Sign_Learning/Signs/Objects/${searchQuery}.mp4`);
       if (storageRef) {
-        const url = await getDownloadURL(storageRef); // Use await to get the URL
+        const url = await getDownloadURL(storageRef);
         setVideoUrl(url);
-    } else {
+        setError('');
+        setIsModalOpen(true);
+        setSearchedWord(searchQuery);
+      } else {
         console.error('Storage reference is not properly initialized');
         setVideoUrl('');
+        setError('Video not found');
+      }
+    } catch (error) {
+      console.error('Error retrieving video:', error);
+      setVideoUrl('');
+      setError('Error retrieving video');
     }
-} catch (error) {
-    console.error('Error retrieving video:', error);
-    setVideoUrl(''); // Clear the video URL if an error occurs
-}
-};
-  
+  };
+
   const handleScanImage = async () => {
-  
     alert('Scanning...');
+  };
+
+  const closeModal = () => {
+    setVideoUrl('');
+    setError('');
+    setIsModalOpen(false);
   };
 
   return (
@@ -51,15 +63,7 @@ const Homepage = () => {
               <button onClick={handleSearch}>Search</button>
               <button onClick={handleScanImage}>Scan Image</button>
             </div>
-            {error && <div>{error}</div>}
-            {videoURL && (
-              <div>
-                <video controls>
-                  <source src={videoURL} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            )}
+            {error && <div className="error-message">{error}</div>}
           </div>
           <div className="right-content">
             <img src="homebg.jpg" alt="Placeholder" />
@@ -67,6 +71,23 @@ const Homepage = () => {
         </div>
       </div>
       <Footer />
+      {isModalOpen && (
+        <div className="video-box">
+          <div className="video-area">
+            <button className="close-button" onClick={closeModal}>&times;</button>
+            <video controls>
+              <source src={videoURL} type="video/mp4" />
+              Your browser does not support the video tag.
+              </video>
+              {searchedWord && (
+                <p className="searched-word">Searched Word: {searchedWord}</p>
+              )}
+              {!searchedWord && (
+                <p className="searched-word">No searched word found</p>
+              )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

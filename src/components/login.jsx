@@ -3,11 +3,13 @@ import LoginCSS from './login.module.css';
 import { FaGoogle } from 'react-icons/fa';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth, database } from "./firebase"; 
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ const Login = () => {
         // You might want to do something with userCredential.user
         console.log(userCredential.user);
         alert('User logged in successfully');
+        navigate('/home');
 
         // Redirect or do something after successful login
       })
