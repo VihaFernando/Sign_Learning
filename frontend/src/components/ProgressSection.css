@@ -20,6 +20,8 @@
 
 .progressTitle {
     color: #2596be;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .details-box {
