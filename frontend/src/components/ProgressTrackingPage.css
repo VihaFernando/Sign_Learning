@@ -18,6 +18,11 @@
 .progress-sections {
     margin-top: 20px;
     text-align: center;
+
+}
+
+.progress-sections title {
+    font-size: 50px;
 }
 
 /* Responsive styles for smaller screens */
