@@ -8,13 +8,17 @@
   align-items: center;
   padding: 20px;
   background-color: rgba(207, 202, 202, 1.0);
-  color: white;
   z-index: 1000;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
+
+}
+
+span {
+  color: #2E5DA3;
 }
 
 .navigation {

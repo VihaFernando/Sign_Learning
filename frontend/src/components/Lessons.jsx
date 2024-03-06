@@ -31,7 +31,7 @@ function Lessons() {
   ]);
 
   return (
-    <div>
+    <div className="lessonPage">
       <h1 class ="topic">Lessons</h1>
       <section className="lessons-section">
         <div className="container">
