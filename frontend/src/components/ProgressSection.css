@@ -6,13 +6,11 @@
 
 .progress-bar {
     width: 70%;
-    /* Set the desired length of the progress bar */
     height: 20px;
     background-color: #e0e0e0;
     border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
-    /* Center the progress bar */
 }
 
 .progress {
@@ -20,8 +18,10 @@
     background-color: #4c81af;
 }
 
-h3 {
+.progressTitle {
     color: #2596be;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .details-box {

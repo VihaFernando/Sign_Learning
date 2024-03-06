@@ -1,0 +1,151 @@
+.home-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: rgb(202, 195, 195);
+    position: relative;
+    background-color: #eeeeee;
+
+}
+
+.intro-text {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.welcome_text {
+    color: #626193;
+    font-size: 50px;
+    text-align: left;
+
+}
+
+.search-bar {
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+
+
+.searchbar {
+    border-radius: 10px;
+    height: 40px;
+    width: 50%;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.welcome_Subtext {
+    text-align: left;
+    color: #5f5b5b;
+    font-size: 25px;
+    line-height: 1.4;
+
+}
+
+img {
+    width: 400px;
+    height: 420px;
+    margin-top: 100px;
+    border-radius: 30px;
+
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-content {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.left-content {
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+
+
+.search-bar button {
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.video-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-area {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+.close-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.video-area video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    outline: none;
+}
+
+.searched-word {
+    color: #333;
+    margin-top: 10px;
+}

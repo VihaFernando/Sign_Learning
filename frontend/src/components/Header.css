@@ -21,7 +21,7 @@
 
 .menu {
     display: flex;
-    gap: 80px;
+    gap: 30px;
 
 }
 
@@ -43,7 +43,8 @@
     cursor: pointer;
     border-radius: 20px;
     width: 80px;
-    height: 28px;
+    height: 30px;
+    margin-top: 0px;
 }
 
 .menu button:hover {
