@@ -8,7 +8,7 @@ const Header = () => {
 
   const handleLoginButtonClick = () => {
     // Navigate to the "/home" path when the login button is clicked
-    navigate('/login');
+    navigate('/home');
   };
 
   return (
