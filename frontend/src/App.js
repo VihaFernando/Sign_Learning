@@ -10,6 +10,7 @@ import Signup from './components/Signup';
 import Lessons from './components/Lessons'; // Import the Lessons component
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import Level1 from './components/Level1';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/lessons" element={<Lessons />} /> {/* New route for Lessons */}
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Level1" element={<Level1 />} />
         </Routes>
       </div>
     </Router>
