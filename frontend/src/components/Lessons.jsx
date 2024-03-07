@@ -12,6 +12,7 @@ function Lessons() {
     {
       title: 'Level 2',
       img: 'level2.jpg',
+      link: '/Level2'
       
     },
     {

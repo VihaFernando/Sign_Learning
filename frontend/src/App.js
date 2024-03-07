@@ -11,6 +11,7 @@ import Lessons from './components/Lessons'; // Import the Lessons component
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Level1 from './components/Level1';
+import Level2 from './components/Level2';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Level1" element={<Level1 />} />
+          <Route path="/Level2" element={<Level2/>} />
         </Routes>
       </div>
     </Router>
