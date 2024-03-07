@@ -12,6 +12,7 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Level1 from './components/Level1';
 import Level2 from './components/Level2';
+import Level3 from './components/Level3';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Level1" element={<Level1 />} />
           <Route path="/Level2" element={<Level2/>} />
+          <Route path="/Level3" element={<Level3/>} />
         </Routes>
       </div>
     </Router>
