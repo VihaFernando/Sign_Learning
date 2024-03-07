@@ -6,6 +6,7 @@ function Lessons() {
     {
       title: 'Level 1',
       img: 'level1.jpg',
+      link: '/Level1'
       
     },
     {
