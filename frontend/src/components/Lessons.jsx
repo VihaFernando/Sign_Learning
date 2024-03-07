@@ -18,6 +18,7 @@ function Lessons() {
     {
       title: 'Level 3',
       img: 'level3.jpg',
+      link: '/Level3'
     
     },
     {
