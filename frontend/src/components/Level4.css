@@ -3,18 +3,23 @@
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color: navy;  
+    color:skyblue;
+    margin-top: 10%;
+    background-color: rgb(136, 0, 80);  
   }
   .level4h2{
     font-size: 23px;
     color:darkblue;
     margin-top: 18px;
-    margin-left: 10px;
-    margin-bottom: 30px;
+    text-align: left;
+    margin-bottom: 3%;
+    padding-left: 1%;
   }
   .level4li{
     font-size: 19px;
     color:black;
+    text-align: left;
+    padding-left: 2%;
     
   }
   .level4li:hover{
@@ -68,7 +73,7 @@
     border: 2px solid skyblue;
     font-weight: bold;
     text-align: center;
-    margin-left: 33%;  
+    margin-left: 36%; 
   }
   .q4btn:hover{
     background:transparent;

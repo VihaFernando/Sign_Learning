@@ -17,7 +17,7 @@ function Level5 () {
             <MainHeader/>
             <h1 className="level5h1">Level 05</h1><br/>
             <h2 className="level5h2">~ පවුලේ සාමාජිකයෝ (Family members) ~</h2>
-            <h3><ul>
+            <h3 className="level5li"><ul>
                 <Link to ="/" className="level5li" style={{textDecoration:'none'}}>01. අම්මා (Mother) </Link><br/>
                 <Link to ="/" className="level5li" style={{textDecoration:'none'}}>02. තාත්තා (Father) </Link><br/>
                 <Link to ="/" className="level5li" style={{textDecoration:'none'}}>03. අයියා (Elder brother) </Link><br/>
@@ -34,7 +34,7 @@ function Level5 () {
             <div className="quizes5">
             {quizes5.map((qui5) => (
               <div className="qui5">
-                <img src={qui5.img} />
+                <img className="level5Image" src={qui5.img} />
                 <Link to ={qui5.link} style={{textDecoration:'none'}}>
                 <button className="q5btn">Start</button>
                 </Link>
