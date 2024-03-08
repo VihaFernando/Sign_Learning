@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import  "./Level4.css";
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Level4 () {
@@ -12,6 +14,7 @@ function Level4 () {
     
     return (
         <div>
+            <MainHeader/>
             <h1 className="level4h1">Level 04</h1><br/>
             <h2 className="level4h2">~ ක්‍රියා පද (Verbs) ~</h2>
             <h3 className="level4li"><ul>
@@ -48,6 +51,7 @@ function Level4 () {
             ))}
             </div>
         </div>
+        <Footer/>
         </div>    
     );
 };
