@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import  "./Level1.css";
-
+import MainHeader from "./MainHeader";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Level1 () {
     const [quizes1] = useState([
@@ -11,7 +12,8 @@ function Level1 () {
         }     
     ]);
     return (
-        <div class='level1-bg'>
+        <div>
+            <MainHeader/>
             <h1 className="level1h1">Level 01</h1><br/>
             <h2 className="level1h2">~ සිංහල අක්ෂර මාලාව (Sinhala Alphabet) ~</h2>
             <h3><ul>
@@ -33,7 +35,7 @@ function Level1 () {
             <div className="quizes1">
             {quizes1.map((qui1) => (
               <div className="qui1">
-                <img src={qui1.img} width="100%" height="300px" className="overlay" alt=" " />
+                <img className="level1Image" src={qui1.img} />
                 <Link to ={qui1.link} style={{textDecoration:'none'}}>
                 <button className="q1btn">Start</button>
                 </Link>
@@ -41,6 +43,7 @@ function Level1 () {
             ))}
             </div>
         </div>
+        <Footer/>
         </div>    
     );
 };
