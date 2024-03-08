@@ -38,6 +38,7 @@ function Lessons() {
     {
       title: 'Level 6',
       img: 'level6.jpg',
+      link:'/Level6'
       
     }
   ]);
