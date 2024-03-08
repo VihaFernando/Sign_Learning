@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import  "./Level2.css";
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Level2 () {
@@ -11,7 +13,8 @@ function Level2 () {
     ]);
     
     return (
-        <div class='level2-bg'>
+        <div>
+            <MainHeader/>
             <h1 className="level2h1">Level 02</h1><br/>
             <h2 className="level2h2">~ ඉලක්කම් (Numbers) ~</h2>
             <h3><ul>
@@ -23,7 +26,7 @@ function Level2 () {
             <div className="quizes2">
             {quizes2.map((qui2) => (
               <div className="qui2">
-                <img src={qui2.img} width="100%" height="300px" className="overlay" alt=" " />
+                <img className="level2Image" src={qui2.img} />
                 <Link to ={qui2.link} style={{textDecoration:'none'}}>
                 <button className="q2btn">Start</button>
                 </Link>
@@ -31,6 +34,7 @@ function Level2 () {
             ))}
             </div>
         </div>
+        <Footer/>
         </div>    
     );
 };

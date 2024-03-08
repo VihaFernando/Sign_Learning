@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import  "./Level3.css";
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Level3 () {
@@ -11,7 +13,8 @@ function Level3 () {
     ]);
     
     return (
-        <div class='level3-bg'>
+        <div>
+            <MainHeader/>
             <h1 className="level3h1">Level 03</h1><br/>
             <h2 className="level3h2">~ සතියේ දවස් සහා මාස (Days of the week and months) ~</h2>
             <h3 className="level3h4">01. සතියේ දවස් (Days of the week) </h3>
@@ -44,7 +47,7 @@ function Level3 () {
             <div className="quizes3">
             {quizes3.map((qui3) => (
               <div className="qui3">
-                <img src={qui3.img}  />
+                <img className="level3Image" src={qui3.img}  />
                 <Link to ={qui3.link} style={{textDecoration:'none'}}>
                 <button className="q3btn">Start</button>
                 </Link>
@@ -52,6 +55,7 @@ function Level3 () {
             ))}
             </div>
         </div>
+        <Footer/>
         </div>    
     );
 };
