@@ -2,15 +2,16 @@
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color: navy;
-    margin-top: 10%;  
+    color: skyblue;
+    margin-top: 10%;
+    background-color: rgb(136, 0, 80);  
   }
   .level2h2{
     font-size: 23px;
     color:darkblue;
     margin-top: 18px;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
     padding-left: 1%;
   }
   .level2li{
@@ -18,7 +19,7 @@
     color:black;
     text-align: left;
     padding-left: 2%;
-    
+      
   }
   .level2li:hover{
     color:blue;

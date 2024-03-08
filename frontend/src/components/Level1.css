@@ -3,8 +3,9 @@
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color: navy;
+    color: skyblue;
     margin-top: 10%;
+    background-color: rgb(136, 0, 80);
       
   }
   .level1h2{
@@ -12,14 +13,14 @@
     color:darkblue;
     margin-top: 18px;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 3%;
     padding-left: 1%;
   }
   .level1h3{
     font-size: 19px;
     color: black;
     text-align: left;
-    padding-left: 1%;
+    padding-left: 2%;
   }
   .level1h3:hover{
     color:blue;
@@ -27,17 +28,17 @@
   .level1h4{
     font-size: 19px;
     text-align: left;
-    margin-top: 10px;
-    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-bottom: 3%;
     color: black;
-    padding-left: 1.9%;
+    padding-left: 4%;
   }
   .level1li{
     font-size: 16px;
     color: black;
     font-weight: 550;
     text-align: left;
-    padding-left: 3%;
+    padding-left: 4%;
   }
 
   .level1li:hover{

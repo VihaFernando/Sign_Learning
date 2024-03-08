@@ -28,7 +28,7 @@ function Level3 () {
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.7. ඉරිදා (Sunday) </Link><br/>
             </ul></h4>
             <h3 className="level3h4">02. මාස (Months) </h3>
-            ,<h4 className="level3li"><ul>
+            <h4 className="level3li"><ul>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.1. ජනවාරි (January) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.2. පෙබරවාරි (February) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.3. මාර්තු (March) </Link><br/>
