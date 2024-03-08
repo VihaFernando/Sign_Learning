@@ -13,6 +13,7 @@ import ContactUs from './components/ContactUs';
 import Level1 from './components/Level1';
 import Level2 from './components/Level2';
 import Level3 from './components/Level3';
+import Level4 from './components/Level4';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Level1" element={<Level1 />} />
           <Route path="/Level2" element={<Level2/>} />
           <Route path="/Level3" element={<Level3/>} />
+          <Route path="/Level4" element={<Level4/>}/>
         </Routes>
       </div>
     </Router>
