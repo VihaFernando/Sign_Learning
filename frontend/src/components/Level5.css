@@ -1,0 +1,89 @@
+
+  .level5h1{
+    font-size: 45px;
+    font-family:Times New Roman;
+    text-align: center;
+    color:navy;  
+  }
+  .level5h2{
+    font-size: 23px;
+    color:darkblue;
+    margin-top: 18px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+  .level5li{
+    font-size: 19px;
+    color: black;
+    
+  }
+  .level5li:hover{
+    color:blue;
+  }
+  .quiz5h1{
+    font-size: 45px;
+    color:rgb(136, 0, 80);
+    text-align: center;
+    margin-top: 20PX;
+    font-family:Times New Roman;
+    background-color: skyblue; 
+  }
+  .quizes5{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    justify-content: center;
+  }
+  .qui5{
+    flex: 0 0 calc(33.33% - 20px);
+    background:rgb(136, 0, 80);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: .3s;
+    border: 2px solid transparent;
+    margin: 0 10px 20px 10px;
+  }
+  .qui5:hover{
+    border-color:skyblue;
+  }
+  .q5btn{
+    background:skyblue;
+    color:rgb(3,3,82);
+    border-radius: 10px;
+    max-width: 120px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid skyblue;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 33%;  
+  }
+  .q5btn:hover{
+    background:transparent;
+    color:skyblue;
+  }
+  @media(max-width:900px){  
+    .qui5{
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    width: 100%;
+    }
+  }
+  @media(max-width: 500px){
+    .qui5{
+      flex:  0 0 calc(100%);
+      max-width: calc(75%);
+    } 
+  }
+
+
+
+    
+
