@@ -17,7 +17,7 @@ function Level2 () {
             <MainHeader/>
             <h1 className="level2h1">Level 02</h1><br/>
             <h2 className="level2h2">~ ඉලක්කම් (Numbers) ~</h2>
-            <h3><ul>
+            <h3 className="level2li"><ul>
                 <Link to ="/" className="level2li" style={{textDecoration:'none'}}>01. 0 සිට 10 දක්වා ඉලක්කම් (Numbers from 0 to 10) </Link><br/>
                 <Link to ="/" className="level2li" style={{textDecoration:'none'}}>02. 20 සිට 100 දක්වා දහයේ ගුණාකාර (Multiples of ten from 20 to 100)</Link><br/>    
             </ul></h3>

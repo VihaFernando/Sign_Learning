@@ -18,7 +18,7 @@ function Level3 () {
             <h1 className="level3h1">Level 03</h1><br/>
             <h2 className="level3h2">~ සතියේ දවස් සහා මාස (Days of the week and months) ~</h2>
             <h3 className="level3h4">01. සතියේ දවස් (Days of the week) </h3>
-            <ul>
+            <h4 className="level3li"><ul>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.1. සදුදා (Monday) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.2. අගහරුවාදා (Tuesday) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.3. බදාදා (Wednesday) </Link><br/>
@@ -26,9 +26,9 @@ function Level3 () {
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.5. සිකුරාදා (Friday) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.6. සෙනසුරාදා (Saturday)  </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>01.7. ඉරිදා (Sunday) </Link><br/>
-            </ul>
+            </ul></h4>
             <h3 className="level3h4">02. මාස (Months) </h3>
-            <ul>
+            ,<h4 className="level3li"><ul>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.1. ජනවාරි (January) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.2. පෙබරවාරි (February) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.3. මාර්තු (March) </Link><br/>
@@ -41,7 +41,7 @@ function Level3 () {
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.10. ඔක්තෝම්බර් (October) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.11. නොවැම්බර් (November) </Link><br/>
                 <Link to ="/" className="level3li" style={{textDecoration:'none'}}>02.12. දෙසැම්බර් (December) </Link><br/>
-            </ul>
+            </ul></h4>
             <div className="quiz3-bg">
             <h1 className="quiz3h1">Game 03</h1>
             <div className="quizes3">

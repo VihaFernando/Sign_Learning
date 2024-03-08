@@ -4,7 +4,8 @@
     font-family:Times New Roman;
     text-align: center;
     color: navy;
-    margin-top: 10%;  
+    margin-top: 10%;
+      
   }
   .level1h2{
     font-size: 23px;
@@ -12,11 +13,13 @@
     margin-top: 18px;
     text-align: left;
     margin-bottom: 30px;
+    padding-left: 1%;
   }
   .level1h3{
     font-size: 19px;
     color: black;
     text-align: left;
+    padding-left: 1%;
   }
   .level1h3:hover{
     color:blue;
@@ -25,18 +28,22 @@
     font-size: 19px;
     text-align: left;
     margin-top: 10px;
-    margin-bottom: 3%;
+    margin-bottom: 1.5%;
     color: black;
+    padding-left: 1.9%;
   }
   .level1li{
     font-size: 16px;
     color: black;
-    text-align: left;
     font-weight: 550;
+    text-align: left;
+    padding-left: 3%;
   }
+
   .level1li:hover{
-    color:blue;
+    color: blue;  
   }
+  
   .quiz1h1{
     font-size: 45px;
     color:rgb(136, 0, 80);

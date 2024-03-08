@@ -1,39 +1,26 @@
-  .level3h1{
+
+  .level4h1{
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color:navy;
-    margin-top: 10%;  
+    color: navy;  
   }
-  .level3h2{
+  .level4h2{
     font-size: 23px;
     color:darkblue;
     margin-top: 18px;
-    text-align: left;
+    margin-left: 10px;
     margin-bottom: 30px;
-    padding-left: 1%;
   }
-  .level3h4{
-    font-size: 18px;
-    text-align: left;
-    margin-top: 10px;
-    color: black;
-    margin-bottom: 2%;
-    padding-left: 2%;
-  }
-  .level3li{
-    font-size: 16px;
-    color: black;
-    text-align: left;
-    font-weight: 550;
-    padding-left: 3%;
-
+  .level4li{
+    font-size: 19px;
+    color:black;
     
   }
-  .level3li:hover{
+  .level4li:hover{
     color:blue;
   }
-  .quiz3h1{
+  .quiz4h1{
     font-size: 45px;
     color:rgb(136, 0, 80);
     text-align: center;
@@ -41,13 +28,13 @@
     font-family:Times New Roman;
     background-color: skyblue; 
   }
-  .quizes3{
+  .quizes4{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center;
   }
-  .qui3{
+  .qui4{
     flex: 0 0 calc(33.33% - 20px);
     background:rgb(136, 0, 80);
     border-radius: 10px;
@@ -57,15 +44,15 @@
     border: 2px solid transparent;
     margin: 0 10px 20px 10px;
   }
-  .qui3:hover{
+  .qui4:hover{
     border-color:skyblue;
   }
-  .level3Image{
+  .level4Image{
     width: 100%;
     height: 70%;
     margin-top: 5%;
   }
-  .q3btn{
+  .q4btn{
     background:skyblue;
     color:rgb(3,3,82);
     border-radius: 10px;
@@ -81,33 +68,24 @@
     border: 2px solid skyblue;
     font-weight: bold;
     text-align: center;
-    margin-left: 36%;  
+    margin-left: 33%;  
   }
-  .q3btn:hover{
+  .q4btn:hover{
     background:transparent;
     color:skyblue;
   }
   @media(max-width:900px){  
-    .qui3{
+    .qui4{
     flex: 0 0 calc(50% - 15px);
     max-width: calc(50% - 15px);
     width: 100%;
     }
-    .level3h1{
-        margin-top: 15%;
-    }
-    .q3btn{
-        margin-left: 28%;
-    }
   }
   @media(max-width: 500px){
-    .qui3{
+    .qui4{
       flex:  0 0 calc(100%);
       max-width: calc(75%);
-    }
-    .level1h1{
-        margin-top: 20%;
-    }  
+    } 
   }
 
 
