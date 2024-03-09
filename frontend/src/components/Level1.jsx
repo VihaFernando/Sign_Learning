@@ -38,13 +38,8 @@ function Level1 () {
             <div className="quizes1">
             {quizes1.map((qui1) => (
               <div className="qui1">
-<<<<<<< HEAD
-                <img src={qui1.img} width="100%" height="300px" className="overlay" alt=" " />
-                <Link to ="/Quiz" style={{textDecoration:'none'}}>
-=======
                 <img className="level1Image" src={qui1.img} />
-                <Link to ={qui1.link} style={{textDecoration:'none'}}>
->>>>>>> cb29e82c6ed002beefa4265fa195fdaddf316b9c
+                <Link to ="/Quiz"style={{textDecoration:'none'}}>
                 <button className="q1btn">Start</button>
                 </Link>
               </div>
