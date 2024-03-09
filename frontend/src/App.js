@@ -13,13 +13,15 @@ import ContactUs from './components/ContactUs';
 import Level1 from './components/Level1';
 import Level2 from './components/Level2';
 import Level3 from './components/Level3';
-<<<<<<< HEAD
-import Quiz from './components/Quiz';
-=======
 import Level4 from './components/Level4';
 import Level5 from './components/Level5';
 import Level6 from './components/Level6';
->>>>>>> cb29e82c6ed002beefa4265fa195fdaddf316b9c
+import Quiz from './components/Quiz';
+import Quiz2 from './components/Quiz2';
+import Quiz3 from './components/Quiz3';
+import Quiz4 from './components/Quiz4';
+import Quiz5 from './components/Quiz5';
+import Quiz6 from './components/Quiz6';
 
 function App() {
   return (
@@ -37,13 +39,15 @@ function App() {
           <Route path="/Level1" element={<Level1 />} />
           <Route path="/Level2" element={<Level2/>} />
           <Route path="/Level3" element={<Level3/>} />
-<<<<<<< HEAD
-          <Route path="/Quiz" element={<Quiz/>} />
-=======
           <Route path="/Level4" element={<Level4/>}/>
           <Route path="/Level5" element={<Level5/>}/>
           <Route path="/Level6" element={<Level6/>}/>
->>>>>>> cb29e82c6ed002beefa4265fa195fdaddf316b9c
+          <Route path="/Quiz" element={<Quiz/>}/>
+          <Route path="/Quiz2" element={<Quiz2/>}/>
+          <Route path="/Quiz3" element={<Quiz3/>}/>
+          <Route path="/Quiz4" element={<Quiz4/>}/>
+          <Route path="/Quiz5" element={<Quiz5/>}/>
+          <Route path="/Quiz6" element={<Quiz6/>}/>
         </Routes>
       </div>
     </Router>

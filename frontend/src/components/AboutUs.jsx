@@ -23,7 +23,7 @@ function AboutUs() {
             <h1>About Us</h1>
             <div className="description-section">
                 <div className="image-frame">
-                    <img src='/deafkid_1.jpg' alt="Deaf Kid" className="left-image" />
+                    <img src='/about-us.jpg' alt="Deaf Kid" className="left-image" />
                 </div>
                 <div className="description-box">
                     <h2>About SignLearning</h2>
