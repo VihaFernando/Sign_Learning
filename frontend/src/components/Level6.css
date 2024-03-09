@@ -1,30 +1,39 @@
-  .level2h1{
+  .level6h1{
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color: skyblue;
-    margin-top: 10%;
-    background-color: rgb(136, 0, 80);  
+    color:skyblue;
+    background-color:rgb(136, 0, 80); 
+    margin-top: 10%; 
   }
-  .level2h2{
+  .level6h2{
     font-size: 23px;
-    color:darkblue;
+    color: darkblue;
     margin-top: 18px;
     text-align: left;
     margin-bottom: 3%;
     padding-left: 1%;
   }
-  .level2li{
-    font-size: 19px;
-    color:black;
+  .level6h4{
+    font-size: 18px;
     text-align: left;
-    padding-left: 2%;
-      
+    margin-top: 3%;
+    color: black;
+    padding-left:4%;
+    margin-bottom: 3%;
   }
-  .level2li:hover{
+  .level6li{
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    font-weight: 550;
+    padding-left: 4%;
+    
+  }
+  .level6li:hover{
     color:blue;
   }
-  .quiz2h1{
+  .quiz6h1{
     font-size: 45px;
     color:rgb(136, 0, 80);
     text-align: center;
@@ -32,13 +41,13 @@
     font-family:Times New Roman;
     background-color: skyblue; 
   }
-  .quizes2{
+  .quizes6{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center;
   }
-  .qui2{
+  .qui6{
     flex: 0 0 calc(33.33% - 20px);
     background:rgb(136, 0, 80);
     border-radius: 10px;
@@ -48,15 +57,15 @@
     border: 2px solid transparent;
     margin: 0 10px 20px 10px;
   }
-  .qui2:hover{
+  .qui6:hover{
     border-color:skyblue;
   }
-  .level2Image{
+  .level6Image{
     width: 100%;
     height: 70%;
     margin-top: 5%;
   }
-  .q2btn{
+  .q6btn{
     background:skyblue;
     color:rgb(3,3,82);
     border-radius: 10px;
@@ -74,35 +83,35 @@
     text-align: center;
     margin-left: 36%;  
   }
-  .q2btn:hover{
+  .q6btn:hover{
     background:transparent;
     color:skyblue;
   }
   @media(max-width:900px){  
-    .qui2{
+    .qui6{
     flex: 0 0 calc(50% - 15px);
     max-width: calc(50% - 15px);
     width: 100%;
     }
-    .level2h1{
+    .level6h1{
         margin-top: 15%;
     }
-    .q2btn{
+    .q6btn{
         margin-left: 28%;
     }
   }
   @media(max-width: 500px){
-    .qui2{
+    .qui6{
       flex:  0 0 calc(100%);
       max-width: calc(75%);
-    } 
-    .level1h1{
-    margin-top: 20%;
-    } 
-}  
-  
+    }
+    .level6h1{
+        margin-top: 20%;
+    }  
+  }
 
 
 
     
+
 

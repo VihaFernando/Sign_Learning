@@ -1,12 +1,13 @@
-  .level2h1{
+
+  .level5h1{
     font-size: 45px;
     font-family:Times New Roman;
     text-align: center;
-    color: skyblue;
+    color:skyblue;
     margin-top: 10%;
     background-color: rgb(136, 0, 80);  
   }
-  .level2h2{
+  .level5h2{
     font-size: 23px;
     color:darkblue;
     margin-top: 18px;
@@ -14,17 +15,16 @@
     margin-bottom: 3%;
     padding-left: 1%;
   }
-  .level2li{
+  .level5li{
     font-size: 19px;
-    color:black;
+    color: black;
     text-align: left;
-    padding-left: 2%;
-      
+    padding-left: 2%; 
   }
-  .level2li:hover{
+  .level5li:hover{
     color:blue;
   }
-  .quiz2h1{
+  .quiz5h1{
     font-size: 45px;
     color:rgb(136, 0, 80);
     text-align: center;
@@ -32,13 +32,13 @@
     font-family:Times New Roman;
     background-color: skyblue; 
   }
-  .quizes2{
+  .quizes5{
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center;
   }
-  .qui2{
+  .qui5{
     flex: 0 0 calc(33.33% - 20px);
     background:rgb(136, 0, 80);
     border-radius: 10px;
@@ -48,15 +48,15 @@
     border: 2px solid transparent;
     margin: 0 10px 20px 10px;
   }
-  .qui2:hover{
+  .qui5:hover{
     border-color:skyblue;
   }
-  .level2Image{
+  .level5Image{
     width: 100%;
     height: 70%;
     margin-top: 5%;
   }
-  .q2btn{
+  .q5btn{
     background:skyblue;
     color:rgb(3,3,82);
     border-radius: 10px;
@@ -74,33 +74,32 @@
     text-align: center;
     margin-left: 36%;  
   }
-  .q2btn:hover{
+  .q5btn:hover{
     background:transparent;
     color:skyblue;
   }
   @media(max-width:900px){  
-    .qui2{
+    .qui5{
     flex: 0 0 calc(50% - 15px);
     max-width: calc(50% - 15px);
     width: 100%;
     }
-    .level2h1{
+    .level5h1{
         margin-top: 15%;
     }
-    .q2btn{
+    .q5btn{
         margin-left: 28%;
     }
   }
   @media(max-width: 500px){
-    .qui2{
+    .qui5{
       flex:  0 0 calc(100%);
       max-width: calc(75%);
-    } 
-    .level1h1{
-    margin-top: 20%;
-    } 
-}  
-  
+    }
+    .level5h1{
+        margin-top: 20%;
+    }  
+  }
 
 
 
