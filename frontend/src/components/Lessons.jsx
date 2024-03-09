@@ -26,16 +26,19 @@ function Lessons() {
     {
       title: 'Level 4',
       img: 'level4.jpg',
+      link: '/Level4'
       
     },
     {
       title: 'Level 5',
       img: 'level5.jpg',
+      link:'/Level5'
       
     },
     {
       title: 'Level 6',
       img: 'level6.jpg',
+      link:'/Level6'
       
     }
   ]);
