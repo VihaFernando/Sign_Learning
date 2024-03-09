@@ -1,0 +1,130 @@
+.quiz-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
+  }
+
+
+.quiz-container {
+  flex: 1; /* Allow the quiz container to grow to fill available space */
+  width: 50%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #657efc;
+  border-radius: 5px;
+  margin-top:90px ;
+  margin-bottom: 20px;
+}
+  
+  .quiz-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quiz-box h3 {
+    margin-top: 0;
+  }
+  
+  .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .correct-answer {
+    color: green;
+  }
+  
+  .incorrect-answer {
+    color: red;
+  }
+  
+  .options img {
+    max-width: 110%; 
+    max-height: 130px; 
+    width: auto; 
+    height: auto; 
+    display: block; 
+    margin: auto; 
+}
+  
+  .button_1 {
+    background-color: #3e3cde;
+    color: #fff;
+    margin: 10px;
+    margin-left: 80%;
+    font-size: small;
+  }
+  
+  .button_1:active {
+    background-color: #657efc;
+  }
+  
+  .time {
+    margin: 20px;
+    color: #000;
+    text-align: left
+  }
+  
+  body {
+    background-color: #e9e9e9;
+  }
+  
+  .correct-answer {
+    background-color: green;
+  }
+  
+  .incorrect-answer {
+    background-color: red;
+  }
+  .correct-answer-indicator{
+    background-color: green;
+    color: black;
+  }
+  .Queshion-tag{
+    color: #000;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: left;
+    margin: 20px;
+  }
+  .marks{
+    color: #000;
+    font-size: 20px;
+    text-align: left;
+    margin: 20px;
+  }
+  .queshions{
+     color: #000;
+     text-align: left;
+     font-size: 25px;
+     margin: 20px;
+  }
+  .big-queshion{
+    color: #000;
+    text-align: left;
+    margin: 20px;
+  }
+  .completed-tag{
+    color: #000;
+    text-align: left;
+    margin: 20px;
+    font-size: 22px;
+  }
+  
