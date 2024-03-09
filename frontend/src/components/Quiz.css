@@ -1,12 +1,12 @@
 .quiz-container-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes up the full height of the viewport */
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 
 .quiz-container {
-  flex: 1; /* Allow the quiz container to grow to fill available space */
+  flex: 1; 
   width: 50%;
   max-width: 1000px;
   margin: auto;
@@ -127,4 +127,4 @@
     margin: 20px;
     font-size: 22px;
   }
-  
+ 
