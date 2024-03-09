@@ -34,7 +34,7 @@ function Level1 () {
             {quizes1.map((qui1) => (
               <div className="qui1">
                 <img src={qui1.img} width="100%" height="300px" className="overlay" alt=" " />
-                <Link to ={qui1.link} style={{textDecoration:'none'}}>
+                <Link to ="/Quiz" style={{textDecoration:'none'}}>
                 <button className="q1btn">Start</button>
                 </Link>
               </div>
