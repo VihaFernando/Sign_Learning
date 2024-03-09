@@ -17,7 +17,7 @@
   text-align: center;
   color: skyblue;
   background-color: rgb(0, 53, 139);
-  margin-top: 10%; 
+  margin-top: 8%; 
   
 }
 .level{
@@ -84,7 +84,7 @@
     width: 100%;
   }
   .lesson-h{
-    margin-top: 15%;
+    margin-top: 20%;
   }
 }
 @media(max-width: 600px){  
