@@ -48,7 +48,7 @@ function Level3 () {
             {quizes3.map((qui3) => (
               <div className="qui3">
                 <img className="level3Image" src={qui3.img}  />
-                <Link to ={qui3.link} style={{textDecoration:'none'}}>
+                <Link to ="/Quiz3" style={{textDecoration:'none'}}>
                 <button className="q3btn">Start</button>
                 </Link>
               </div>

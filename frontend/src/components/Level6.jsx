@@ -48,7 +48,7 @@ function Level6 () {
             {quizes6.map((qui6) => (
               <div className="qui6">
                 <img className="level6Image" src={qui6.img} />
-                <Link to ={qui6.link} style={{textDecoration:'none'}}>
+                <Link to ="/Quiz6" style={{textDecoration:'none'}}>
                 <button className="q6btn">Start</button>
                 </Link>
               </div>
