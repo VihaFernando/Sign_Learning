@@ -1,0 +1,61 @@
+.user-popup {
+    position: fixed;
+    top: 29%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    z-index: 1100;
+    text-align: left;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.user-icon {
+    margin-right: 20px;
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.sign-out,
+.delete-account {
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #2E5DA3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    justify-content: initial;
+    transition: background-color 0.3s;
+}
+
+.sign-out:hover,
+.delete-account:hover {
+    background-color: #1F4068;
+}
+
+.user-details {
+    margin-left: 20px;
+}
+
+.user-details p {
+    margin: 8px 0;
+}
