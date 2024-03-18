@@ -32,6 +32,20 @@ const Login = () => {
         alert(`Login failed: ${errorMessage}`);
       });
   };
+  /*
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        setUser(null);
+        alert('User signed out successfully');
+        // Redirect or do something after successful signout
+      })
+      .catch((error) => {
+        console.error('Sign out error:', error);
+      });
+  };
+  */
 
   useEffect(() => {
     // Add an authentication state observer
@@ -66,6 +80,8 @@ const Login = () => {
 
       alert('User signed in with Google successfully');
       // Redirect or do something after successful login
+      navigate('/home');
+
     } catch (error) {
       console.error('Google sign-in error:', error);
     }
