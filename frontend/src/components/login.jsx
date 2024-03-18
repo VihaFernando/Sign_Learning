@@ -4,7 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'firebase/auth'; // Fix import statement
 import { auth, database } from "./firebase"; 
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom'; 
 
 const Login = () => {
   const [password, setPassword] = useState('');
@@ -32,6 +32,20 @@ const Login = () => {
         alert(`Login failed: ${errorMessage}`);
       });
   };
+  /*
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        setUser(null);
+        alert('User signed out successfully');
+        // Redirect or do something after successful signout
+      })
+      .catch((error) => {
+        console.error('Sign out error:', error);
+      });
+  };
+  */
 
   useEffect(() => {
     // Add an authentication state observer
@@ -66,6 +80,8 @@ const Login = () => {
 
       alert('User signed in with Google successfully');
       // Redirect or do something after successful login
+      navigate('/home');
+
     } catch (error) {
       console.error('Google sign-in error:', error);
     }
@@ -78,9 +94,9 @@ const Login = () => {
           <div className={LoginCSS.frame}>
             <h1 className={LoginCSS.h1}>SignLearning</h1>
             <div className={LoginCSS.topnav}>
-              <a className={LoginCSS.active} to={Login}>Login</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
+              <Link className={LoginCSS.active} to={Login}>Login</Link>
+              <Link to="/ContactUs">Contact</Link>
+              <Link to="/AboutUs">About</Link>
             </div>
             <form /*onSubmit={handleLogin}*/>
               <div className={LoginCSS.blueBox}>
@@ -102,7 +118,7 @@ const Login = () => {
                 <div className="input-container">
                   <button type="button" onClick={handleSignInWithGoogle} className={LoginCSS.gog}><FaGoogle className={LoginCSS.icon} /> Google</button>
                 </div>
-                <h4>Not a member ? <a className={LoginCSS.h4} href="#SignUp">Signup</a></h4>
+                <h4 className={LoginCSS.h4}>Not a member ? <Link className={LoginCSS.h4a} to="/Signup">Signup</Link></h4>
               </div>
             </form>
           </div>
