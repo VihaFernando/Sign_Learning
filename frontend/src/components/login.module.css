@@ -67,7 +67,7 @@
   max-width: 350px;
   height: 360px;
   float: left;
-  margin-top: 5%;
+  margin-top: 50px;
   border-radius: 25px;
   margin-left: 24%;
 }
@@ -289,7 +289,9 @@
   .blueBox {
     max-width: 94%;
     max-height: 80%;
-    margin-left: 9px;
+    margin-top: 30px;
+    margin-right: 100px;
+    
 
 
   }
