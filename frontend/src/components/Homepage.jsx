@@ -3,6 +3,7 @@ import MainHeader from './MainHeader';
 import './Homepage.css';
 import Footer from './Footer';
 import { storage, ref, getDownloadURL } from './firebase';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -61,7 +62,9 @@ const Homepage = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               <button onClick={handleSearch}>Search</button>
-              <button onClick={handleScanImage}>Scan Image</button>
+              <Link to='/objectDetection'>
+              <button>Scan Image</button>
+              </Link>
             </div>
             {error && <div className="error-message">{error}</div>}
           </div>

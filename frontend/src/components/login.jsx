@@ -32,20 +32,7 @@ const Login = () => {
         alert(`Login failed: ${errorMessage}`);
       });
   };
-  /*
-
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        setUser(null);
-        alert('User signed out successfully');
-        // Redirect or do something after successful signout
-      })
-      .catch((error) => {
-        console.error('Sign out error:', error);
-      });
-  };
-  */
+  
 
   useEffect(() => {
     // Add an authentication state observer
