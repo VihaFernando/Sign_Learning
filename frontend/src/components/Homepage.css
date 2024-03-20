@@ -34,7 +34,7 @@
 .searchbar {
     border-radius: 10px;
     height: 40px;
-    width: 50%;
+    width: 40%;
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
@@ -149,3 +149,15 @@ img {
     color: #333;
     margin-top: 10px;
 }
+
+.scanButton {
+    width: 110px;
+    height: 40px;
+    font-size: 15px;
+}
+.objectButton {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+}
+
