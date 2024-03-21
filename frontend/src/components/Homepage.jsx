@@ -4,7 +4,7 @@ import './Homepage.css';
 import Footer from './Footer';
 import { storage, ref, getDownloadURL } from './firebase';
 import { Link } from 'react-router-dom';
-import { FaCamera } from 'react-icons/fa';
+
 
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
