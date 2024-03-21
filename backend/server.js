@@ -22,9 +22,11 @@ initializeApp({
 
 // Import the router from server1.js
 const server1Router = require('./server1');
+const videoHandlerRouter = require('./videoHandler')
 
 // Use the router from server1.js
 app.use('/', server1Router);
+app.use('/',videoHandlerRouter)
 
 // Start the server
 const port = process.env.PORT || 8000;
