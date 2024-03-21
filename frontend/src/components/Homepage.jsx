@@ -6,6 +6,7 @@ import { storage, ref, getDownloadURL } from './firebase';
 import { Link } from 'react-router-dom';
 import { FaCamera } from 'react-icons/fa';
 
+
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [videoURL, setVideoUrl] = useState('');
@@ -71,7 +72,9 @@ const Homepage = () => {
               <Link to='/objectDetection'>
                 <button className='scanButton'>Scan Image</button>
               </Link>
+              <Link to='/imageClassification'>
                 <button className='objectButton'>Object</button>
+                </Link>
             </div>
             {error && <div className="error-message">{error}</div>}
           </div>

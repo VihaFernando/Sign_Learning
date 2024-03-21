@@ -6,7 +6,7 @@ import {storage, ref, getDownloadURL } from "./firebase"; // Import necessary Fi
 import labels from "./imagenet-label.json"
 
 
-const imageClassification =()=> {
+const ImageClassification =()=> {
   const [model, setModel] = useState(null);
   const [classLabels, setClassLabels] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -21,7 +21,7 @@ const imageClassification =()=> {
     
     const loadModel = async () => {
       // Load your model here
-      const model_url = "tfjs/MobileNetV3Large/model.json";
+      const model_url = "MobileNetV3Large/model.json";
       const loadedModel = await tf.loadGraphModel(model_url);
       setModel(loadedModel);
     };
@@ -83,7 +83,7 @@ const imageClassification =()=> {
         setConfidence(confidence);
 
         // Fetch video URL based on predicted class
-        const storageRef = ref(storage, `sign_learning/${predictedClass}.mp4`);
+        const storageRef = ref(storage, `Sign_Learning/Signs/Objects/${predictedClass}.mp4`);
         getDownloadURL(storageRef)
           .then(url => {
             setVideoUrl(url);
@@ -181,4 +181,4 @@ const imageClassification =()=> {
   );
 }
 
-export default imageClassification;
+export default ImageClassification;
