@@ -22,6 +22,8 @@ import Quiz3 from './components/Quiz3';
 import Quiz4 from './components/Quiz4';
 import Quiz5 from './components/Quiz5';
 import Quiz6 from './components/Quiz6';
+import ObjectDetection from './components/objectDetection';
+import ImageClassification from './components/imageClassification';
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
           <Route path="/Quiz4" element={<Quiz4/>}/>
           <Route path="/Quiz5" element={<Quiz5/>}/>
           <Route path="/Quiz6" element={<Quiz6/>}/>
+          <Route path="/objectDetection" element={<ObjectDetection/>} />
+          <Route path="/imageClassification" element={<ImageClassification/>} />
         </Routes>
       </div>
     </Router>

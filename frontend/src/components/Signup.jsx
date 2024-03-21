@@ -6,6 +6,7 @@ import { FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import backgroundImage from '../assets/bgimage.png';
 import firebase from '../components/firebase'; 
+import { getDatabase, ref, set } from "firebase/database";
 
 
 import './Signup.css';
@@ -35,12 +36,23 @@ function Signup() {
             }
             const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
             if (user) {
+                writeUserData(user.uid, name, email,password);
                 alert("Account created successfully");
             }
         } catch(error) {
             setError(error.message);
         }
     };
+    const writeUserData = (UID, name, email,password) => {
+        const db = getDatabase();
+        set(ref(db, 'users/' + UID), {
+            username: name,
+            email: email,
+            password: password
+            
+        });
+    }
+
 
     return (
         <div className="bg" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', minHeight: '100vh', minHeight: '100vh', backgroundAttachment: 'fixed' }}>
