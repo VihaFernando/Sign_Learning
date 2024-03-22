@@ -20,7 +20,7 @@ function AboutUs() {
     return (
         <div>
             <Header/>
-            <h1>About Us</h1>
+            <h1 className='topic_new'>About Us</h1>
             <div className="description-section">
                 <div className="image-frame">
                     <img src='/about-us.jpg' alt="Deaf Kid" className="left-image" />

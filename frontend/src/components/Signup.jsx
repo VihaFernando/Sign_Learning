@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
@@ -9,6 +9,7 @@ import firebase from '../components/firebase';
 import { getDatabase, ref, set } from "firebase/database";
 
 
+
 import './Signup.css';
 
 function Signup() {
@@ -16,11 +17,15 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); 
+    
 
     const handleGoogleSignup = async () => {
         try {
             const provider = new firebase.auth.GoogleAuthProvider();
             await firebase.auth().signInWithPopup(provider);
+            navigate('/home');
+           
         } catch(error) {
             setError(error.message);
         }
@@ -38,6 +43,7 @@ function Signup() {
             if (user) {
                 writeUserData(user.uid, name, email,password);
                 alert("Account created successfully");
+                navigate('/home');
             }
         } catch(error) {
             setError(error.message);
@@ -52,8 +58,6 @@ function Signup() {
             
         });
     }
-
-
     return (
         <div className="bg" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', minHeight: '100vh', minHeight: '100vh', backgroundAttachment: 'fixed' }}>
             <div className="container_1">
@@ -111,7 +115,7 @@ function Signup() {
                                 </button>
                             </div>
                             <div className="register-link">
-                                <p>Already have an account? <a href="#">Sign in</a></p>
+                                <p>Already have an account? <Link to="/login">Sign in</Link></p>
                             </div>
                         </form>
                     </div>
@@ -120,9 +124,7 @@ function Signup() {
                     <div className="intro-heading">New Here?</div>
                     <div> <p className='intro'>We empower deaf children to achieve their educational milestones through the art of sign language, fostering a creative journey of communication and expression.</p>
                     </div>
-                </div>
-
-               
+                </div>  
             </div>
            
         </div>

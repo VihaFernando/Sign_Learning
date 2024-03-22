@@ -10,13 +10,12 @@ body {
 }
 
 
-h1 {
-    margin-top: 5%;
-    margin-bottom: 1%;
+.topic_new {
+    margin-top: 7%;
     font-size: 3rem; 
     font-weight: 700;
     text-align: center;
-    color:white;
+    color:rgb(49, 49, 51);
 }
 
 h2 {

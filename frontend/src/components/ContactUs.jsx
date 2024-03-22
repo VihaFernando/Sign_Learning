@@ -11,7 +11,7 @@ const ContactUs = () => {
       <div className="image-container">
         <img src='/brooke-cagle-tLG2hcpITZE-unsplash.jpg' alt="Contact Us" className="call-image" />
         <div className="overlay">
-          <h1>Contact Us</h1>
+          <h1 className='contact_top'>Contact Us</h1>
         </div>
       </div>
 
@@ -20,11 +20,11 @@ const ContactUs = () => {
           title="Fill Out the Form"
           description="Send us a message using the form below. We'll get back to you as soon as possible!"
           linkText="Contact Form"
-          linkTo="/contact-form"
+          linkTo="/Form_contact"
         />
         <ContactOption
           title="Send us an Email"
-          description="Prefer email? Reach out to us at your-email@example.com and we'll assist you promptly."
+          description="Prefer email? Reach out to us at signlearning@gmail.com and we'll assist you promptly."
         />
         <ContactOption
           title="Connect on Social Media"

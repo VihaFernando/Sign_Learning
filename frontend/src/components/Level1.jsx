@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Level1.css";
 import MainHeader from "./MainHeader";
-import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
+
 
 function Level1() {
   const [videoUrl, setVideoUrl] = useState("");
@@ -68,7 +69,7 @@ function Level1() {
           {quizes1.map((qui1) => (
             <div className="qui1">
               <img className="level1Image" src={qui1.img} />
-              <Link to ="/Quiz"style={{textDecoration:'none'}}>
+              <Link to ="/Quiz1"style={{textDecoration:'none'}}>
                 <button className="q1btn">Start</button>
               </Link>
             </div>
