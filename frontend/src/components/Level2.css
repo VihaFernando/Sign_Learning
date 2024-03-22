@@ -14,13 +14,23 @@
     margin-bottom: 3%;
     padding-left: 1%;
   }
-  .level2li{
-    font-size: 19px;
-    color:black;
+  .level2h4{
+    font-size: 18px;
     text-align: left;
-    padding-left: 2%;
-      
+    margin-top: 3%;
+    color: black;
+    padding-left:4%;
+    margin-bottom: 3%;
   }
+  .level2li{
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    font-weight: 550;
+    padding-left: 4%;
+    
+  }
+  
   .level2li:hover{
     color:blue;
   }
