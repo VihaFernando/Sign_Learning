@@ -1,14 +1,18 @@
 .user-popup {
     position: fixed;
-    top: 29%;
-    left: 79%;
+    top: 34%;
+    left: 85%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 100px;
+    padding: 6%;
     border-radius: 5px;
     border: 1px solid #ccc;
     z-index: 1100;
-    text-align: left;
+    padding-top: 4%;
+    
+    
+    
+    
 }
 
 .close-icon {
@@ -19,18 +23,17 @@
     color: #555;
 }
 
-.user-info {
-    display: flex;
+
+.user-icon {
+    margin-right: 0px;
+    margin-top: 1%;
     align-items: center;
 
 }
 
-.user-icon {
-    margin-right: 20px;
-}
-
 .action-buttons {
     margin-top: 20px;
+    
 }
 
 .sign-out,
@@ -45,15 +48,18 @@
     font-size: 14px;
     justify-content: initial;
     transition: background-color 0.3s;
+    margin-bottom: 3%;
+    
 }
 
 .sign-out:hover,
 .delete-account:hover {
-    background-color: #1F4068;
+    background-color:rgb(28, 166, 221);
 }
 
 .user-details {
-    margin-left: 20px;
+    
+    text-align: left;
 }
 
 .user-details p {
