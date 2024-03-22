@@ -4,6 +4,7 @@ import MainHeader from "./MainHeader";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
+
 function Level1() {
   const [videoUrl, setVideoUrl] = useState("");
   const [showVideoBox, setShowVideoBox] = useState(false);
@@ -36,7 +37,7 @@ function Level1() {
       img: 'quiz1.jpg',
     }     
   ]);
-
+  
   return (
     <div>
       <MainHeader />
@@ -45,19 +46,19 @@ function Level1() {
       <h2 className="level1h2">~ සිංහල අක්ෂර මාලාව (Sinhala Alphabet) ~</h2>
       <h3 className="level1h3">
         <ul>
-          <li onClick={() => fetchVideo('Bag.mp4')} className="level1h3" style={{ textDecoration: 'none', cursor: 'pointer' }}>01. ස්වර අක්ෂර (Vowels)</li>
+          <p onClick={() => fetchVideo('Swara.mp4')} className="level1h3" style={{ textDecoration: 'none', cursor: 'pointer' }}>01. ස්වර අක්ෂර (Vowels)</p>
         </ul>
       </h3>
-      <div className="level1h4">02. ව්‍යඤ්ජන අක්ෂර (Consonants)</div>
+      <h3><div className="level1h4">02. ව්‍යඤ්ජන අක්ෂර (Consonants)</div></h3>
       <div className="level1li">
         <ul>
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.1. කණ්ඨජ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.2. තාලුජ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.3. මූර්ධජ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.4. දන්තජ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.5. ඕෂ්ඨජ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.6. අන්තඃස්ථ අක්ෂර</Link><br />
-          <Link to="/" className="level1li" style={{ textDecoration: 'none' }}>02.7. ඌෂ්ම අක්ෂර</Link><br />
+        <p onClick={() => fetchVideo('K.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.1. කණ්ඨජ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('CHA.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.2. තාලුජ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('T.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.3. මූර්ධජ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('THA.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.4. දන්තජ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('P.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.5. ඕෂ්ඨජ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('Y.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.6. අන්තඃස්ථ අක්ෂර</p><br />
+        <p onClick={() => fetchVideo('SHA.mp4')} className="level1li" style={{ textDecoration: 'none', cursor: 'pointer' }}>02.7. ඌෂ්ම අක්ෂර</p><br />
         </ul>
       </div>
 
@@ -90,6 +91,8 @@ function Level1() {
           )}
         </div>
       )}
+
+      
     </div>
   );
 }
