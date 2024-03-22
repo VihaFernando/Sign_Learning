@@ -17,7 +17,7 @@ const bucket = admin.storage().bucket();
 // Define a route to retrieve videos
 router.get('/videos/:videoName', (req, res) => {
   const videoName = req.params.videoName;
-  const file = bucket.file(`Sign_Learning/Signs/Objects/${videoName}`);
+  const file = bucket.file(`Sign_Learning/Signs/lessons/${videoName}`);
 
   file.createReadStream()
     .on('error', (err) => {
