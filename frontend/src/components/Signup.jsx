@@ -34,21 +34,20 @@ function Signup() {
                 setError("Please enter a valid email address");
                 return;
             }
-            const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
+            const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
             if (user) {
-                writeUserData(user.uid, name, email,password);
+                writeUserData(user.uid, name, email);
                 alert("Account created successfully");
             }
         } catch(error) {
             setError(error.message);
         }
     };
-    const writeUserData = (UID, name, email,password) => {
+    const writeUserData = (UID, name, email) => {
         const db = getDatabase();
         set(ref(db, 'users/' + UID), {
             username: name,
             email: email,
-            password: password
             
         });
     }

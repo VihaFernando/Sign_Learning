@@ -12,11 +12,13 @@ import {getDatabase} from 'firebase/database';
 const firebaseConfig = {
   apiKey: "AIzaSyAFQh3x-VFk6P1M21OHZFoSeBaMCrrZ-_Y",
   authDomain: "signlearning-6c06e.firebaseapp.com",
+  databaseURL: "https://signlearning-6c06e-default-rtdb.firebaseio.com",
   projectId: "signlearning-6c06e",
   storageBucket: "signlearning-6c06e.appspot.com",
   messagingSenderId: "838194290315",
   appId: "1:838194290315:web:77acb3a5ac2e9c7a227e8e",
-  measurementId: "G-V88KR27NT6"
+  measurementId: "G-V88KR27NT6",
+
 };
 
 // Initialize Firebase
