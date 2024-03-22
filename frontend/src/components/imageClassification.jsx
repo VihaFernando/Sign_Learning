@@ -3,7 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import { DropzoneArea } from "material-ui-dropzone";
 import { Backdrop, Chip, CircularProgress, Grid, Stack } from "@mui/material";
 import {storage, ref, getDownloadURL } from "./firebase"; // Import necessary Firebase storage functions
-import labels from "./imagenet-label.json"
+import labels from "./imagenet-label.json";
 
 
 const ImageClassification =()=> {

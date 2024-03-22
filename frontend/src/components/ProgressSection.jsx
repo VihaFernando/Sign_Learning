@@ -24,12 +24,14 @@ const ProgressSection = ({ title, progress }) => {
       {hovered && (
         <div className="details-box">
           {/* Add details specific to each section here */}
+          
           {title === 'Lessons' && (
             <>
               <p>Completed Lessons: 30</p>
               <p>Lessons to be done: 20</p>
             </>
           )}
+
           {title === 'Games' && (
             <>
               <p>Game 1 Results: 80%</p>
