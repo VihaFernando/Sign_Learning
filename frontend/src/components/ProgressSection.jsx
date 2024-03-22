@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ProgressSection.css';
 
+
 const ProgressSection = ({ title, progress }) => {
   const [hovered, setHovered] = useState(false);
 
