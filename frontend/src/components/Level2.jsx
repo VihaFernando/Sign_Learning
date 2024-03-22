@@ -5,6 +5,32 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Level2 () {
+  
+    const [videoUrl, setVideoUrl] = useState("");
+    const [showVideoBox, setShowVideoBox] = useState(false);
+  
+    // Function to fetch video
+    const fetchVideo = async (videoName) => {
+      try {
+        const response = await fetch(`http://localhost:8000/videos/${videoName}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch video');
+        }
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        setVideoUrl(url);
+        setShowVideoBox(true);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    // Function to close the video box
+    const closeVideoBox = () => {
+      setVideoUrl("");
+      setShowVideoBox(false);
+    };
+  
     const [quizes2] = useState([
         {
           title: 'Game 02',
@@ -35,7 +61,22 @@ function Level2 () {
             </div>
         </div>
         <Footer/>
-        </div>    
+        
+        {/* Video Box */}
+      {showVideoBox && (
+        <div className="video-box">
+          <button className="close-button" onClick={closeVideoBox}>Close</button>
+          {videoUrl && (
+            <video controls>
+              <source src={videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
+        </div>
+      )}
+
+        
+    </div>    
     );
 };
 export default Level2;
