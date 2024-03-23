@@ -4,6 +4,7 @@ import MainHeader from "./MainHeader";
 import Footer from "./Footer";
 
 import "./Quiz4.css";
+import { quiz_3 } from "../config/quiz";
 
 const Quiz = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
