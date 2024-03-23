@@ -1,12 +1,13 @@
 // MainHeader.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import './MainHeader.css';
 import UserPopup from './UserPopup';
 
 const MainHeader = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleUserIconClick = () => {
         setIsPopupOpen(true);
@@ -16,9 +17,8 @@ const MainHeader = () => {
         setIsPopupOpen(false);
     };
 
-    const handleSignOut = () => {
-        // Implement your sign out logic here
-        // Example: call a sign-out function or dispatch an action
+    const handleSignOutClick = () => {
+    navigate('/login');
     };
 
     const handleDeleteAccount = () => {
@@ -42,7 +42,7 @@ const MainHeader = () => {
             {isPopupOpen && (
                 <UserPopup
                     onClose={handleClosePopup}
-                    onSignOut={handleSignOut}
+                    onSignOut={handleSignOutClick}
                     onDeleteAccount={handleDeleteAccount}
                 />
             )}

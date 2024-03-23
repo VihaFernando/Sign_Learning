@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react'; // Add useEffect import
 import LoginCSS from './login.module.css';
 import { FaGoogle } from 'react-icons/fa';
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from 'firebase/auth'; // Fix import statement
-import { auth, database } from "./firebase"; 
+import { auth} from "./firebase"; 
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; 
 
+
 const Login = () => {
   const [password, setPassword] = useState('');
-  //const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [rememberMe, setRememberMe] = useState(false);
+ 
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,6 +26,8 @@ const Login = () => {
         alert('User logged in successfully');
         alert(`Welcome, ${user.email}`);
         navigate('/home');
+        
+      
 
         // Redirect or do something after successful login
       })
@@ -38,8 +42,14 @@ const Login = () => {
     // Add an authentication state observer
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
+      
     });
-
+    const rememberedEmail = localStorage.getItem('rememberedEmail');
+    if (rememberedEmail) {
+      setEmail(rememberedEmail);
+      setRememberMe(true);
+    }
+    
     // Clean up the observer when the component unmounts
     return () => {
       unsubscribe();
@@ -53,17 +63,9 @@ const Login = () => {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       
-      // If user signs in with Google, use their email as username
       setEmail(user.email);
       
-      // You can add more data to the user object if needed
-      const userData = {
-        email: user.email,
-        // Add more data if needed
-      };
-
-      // Write data to the database
-      await database.ref('users/' + user.uid).set(userData);
+      
 
       alert('User signed in with Google successfully');
       // Redirect or do something after successful login
@@ -71,6 +73,16 @@ const Login = () => {
 
     } catch (error) {
       console.error('Google sign-in error:', error);
+    }
+  };
+  const handleRememberMeChange = () => {
+    setRememberMe(!rememberMe);
+    if (!rememberMe) {
+      // If Remember Me is checked, store the email in local storage
+      localStorage.setItem('rememberedEmail', email);
+    } else {
+      // If Remember Me is unchecked, remove the email from local storage
+      localStorage.removeItem('rememberedEmail');
     }
   };
 
@@ -98,6 +110,10 @@ const Login = () => {
                   <input type="password" className={LoginCSS.input} value={password} placeholder="&#x1F512;  Enter Password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <br />
+                <div class="remember-me">
+                  <input type="checkbox" checked={rememberMe} onChange={handleRememberMeChange} />
+                  <label>Remember Me</label>
+                </div>
                 <button type="submit" onClick={handleLogin} className={LoginCSS.log}>Login</button>
                 <br />
                 <h3 className={LoginCSS.h3}>OR LOGIN WITH</h3>
