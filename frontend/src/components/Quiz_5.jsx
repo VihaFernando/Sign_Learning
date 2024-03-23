@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import MainHeader from './MainHeader';
-import Footer from './Footer';
-import './Quiz4.css'; 
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
+
+import "./Quiz4.css";
+import { quiz_5 } from "../config/quiz";
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -12,44 +14,32 @@ const Quiz = () => {
   const [timer, setTimer] = useState(50); 
   const [timerRunning, setTimerRunning] = useState(false);
 
-  const quizData = [
-    {
-        question: '"අoක 0" ',
-        options: ['අඩනවා', 'දුවනවා ', 'චිත්‍ර අදිනවා ', 'මහනවා'],
-        correctAnswer: 'දුවනවා ' 
-      },
-      {
-        question: '"අoක 7" ',
-        options: ['කනවා', 'දුවනවා', 'බොනවා', 'උයනවා'],
-        correctAnswer: 'කනවා' 
-      },
-      {
-        question: '"අoක 1" ',
-        options: ['පීනනවා ', 'ලියනවා', 'නටනවා', 'බලනවා'],
-        correctAnswer: 'බලනවා'
-      }, 
-      {
-        question: '"අoක 3" ',
-        options: ['නටනවා', 'මහනවා', 'යනවා', 'එනවා'],
-        correctAnswer: 'මහනවා' 
-      },
-      {
-        question: '"අoක 9 " ',
-        options: ["බලනවා", 'අඩනවා', 'බොනවා', 'කනවා'],
-        correctAnswer: 'අඩනවා' 
-      },
-   
-  ];
+
 
   const handleNextQuestion = useCallback(() => {
-    if (currentQuestion < quizData.length - 1) {
+    if (currentQuestion < quiz_5.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setTimer(50); 
       setTimerRunning(true); 
     } else {
       setQuizCompleted(true);
+      const quizNumber = currentQuestion + 1;
+			fetch(`${process.env.REACT_APP_API_URL}/api/quiz-results?userId=yourUserId&quizNumber=${quizNumber}`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					quizNumber: "quiz5",
+					score,
+					totalQuestions: quiz_5.length,
+				}),
+			})
+				.then((response) => response.json())
+				.then((data) => console.log(data))
+				.catch((error) => console.error("Error:", error));
     }
-  }, [currentQuestion, quizData.length]);
+  }, [currentQuestion, quiz_5.length]);
 
   useEffect(() => {
     let intervalId;
@@ -67,7 +57,7 @@ const Quiz = () => {
   }, [timer, timerRunning, handleNextQuestion]);
 
   const handleAnswerClick = (selectedAnswer) => {
-    const currentQuestionData = quizData[currentQuestion];
+    const currentQuestionData = quiz_5[currentQuestion];
     const correctAnswer = currentQuestionData.correctAnswer;
     const isCorrect = selectedAnswer === correctAnswer;
 
@@ -81,22 +71,22 @@ const Quiz = () => {
 
   return (
     <div className='quiz-container-wrapper'>
-        <MainHeader/>
+       <MainHeader/> 
     <div className="quiz-container">
       <div className="quiz-box">
         {quizCompleted ? (
           <div>
             <h3 className='completed-queshion_1'>Quiz Completed</h3>
-            <p className='mark'>Total Marks: {score} / {quizData.length}</p>
-            <Link to="/Level5" className="button_1">Next Page</Link>
+            <p className='mark'>Total Marks: {score} / {quiz_5.length}</p>
+            <Link to="/LessonDetails" className="button_1">check quiz progress</Link>
           </div>
         ) : (
           <div>
             <h3 className='current-queshion'>Question {currentQuestion + 1}</h3>
-            <h3 className='main-queshion'>පහත දී ඇති සිoහල සoඤා සoකේතයට අදාළ මාසය හෝ සතියේ දිනය තෝරන්න.</h3>
-            <p className='queshion-type'>{quizData[currentQuestion].question}</p>
+            <h3 className='main-queshion'>පහත දී ඇති සිoහල සoඤා සoකේතයට අදාළ පවුලේ සාමාජිකයන් තෝරන්න.</h3>
+            <p className='queshion-type'>{quiz_5[currentQuestion].question}</p>
             <div className="options">
-              {quizData[currentQuestion].options.map((option, index) => (
+              {quiz_5[currentQuestion].options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(option)}
@@ -111,7 +101,7 @@ const Quiz = () => {
                   disabled={answers.length > currentQuestion}
                 >
                   {option} 
-                  {answers.length > currentQuestion && !answers[currentQuestion].isCorrect && option === quizData[currentQuestion].correctAnswer && <span className="correct-answer-indicator">Correct Answer</span>}
+                  {answers.length > currentQuestion && !answers[currentQuestion].isCorrect && option === quiz_5[currentQuestion].correctAnswer && <span className="correct-answer-indicator">Correct Answer</span>}
                 </button>
               ))}
             </div>
@@ -123,7 +113,7 @@ const Quiz = () => {
         )}
       </div>
     </div>
-    <Footer/>
+   <Footer/>
     </div>
   );
 };

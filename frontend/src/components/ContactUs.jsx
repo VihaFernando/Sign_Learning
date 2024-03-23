@@ -11,7 +11,7 @@ const ContactUs = () => {
       <div className="image-container">
         <img src='/brooke-cagle-tLG2hcpITZE-unsplash.jpg' alt="Contact Us" className="call-image" />
         <div className="overlay">
-          <h1>Contact Us</h1>
+          <h1 className='contact_topic'>Contact Us</h1>
         </div>
       </div>
 
@@ -24,14 +24,14 @@ const ContactUs = () => {
         />
         <ContactOption
           title="Send us an Email"
-          description="Prefer email? Reach out to us at your-email@example.com and we'll assist you promptly."
+          description="Prefer email? Reach out to us at signlearning@gmail.com and we'll assist you promptly."
         />
         <ContactOption
           title="Connect on Social Media"
           description="Join our community on Facebook and Instagram for updates and exclusive content."
           socialLinks={[
-            { name: "Facebook", url: "#" },
-            { name: "Instagram", url: "#" }
+            { name: "Facebook", url: "https://www.facebook.com/" },
+            { name: "Instagram", url: "https://www.instagram.com/" }
           ]}
         />
       </div>

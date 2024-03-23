@@ -20,7 +20,8 @@ function AboutUs() {
     return (
         <div>
             <Header/>
-            <h1>About Us</h1>
+            <h1 className='about_topic'>About Us</h1>
+            <div className='img_des'>
             <div className="description-section">
                 <div className="image-frame">
                     <img src='/about-us.jpg' alt="Deaf Kid" className="left-image" />
@@ -29,6 +30,7 @@ function AboutUs() {
                     <h2>About SignLearning</h2>
                     <p>We empower deaf children to achieve their educational milestones through the art of sign language, fostering a creative journey of communication and expression.</p>
                     <button className="learn-more-button" onClick={toggleMissionVision}>Learn More</button>
+                </div>
                 </div>
             </div>
 
@@ -60,39 +62,39 @@ function AboutUs() {
                     <div className="boxes-container">
                         <div className="box">
                             <div className="circular-image-container">
-                                <img src="dog.jpg" alt="Dog" />
+                                <img className="img_1" src="dog.jpg" alt="Dog" />
                             </div>
                             <h3>Vihanga Fernando</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
-                            <RiInstagramFill className='icon' />
-                            <FaLinkedin className='icon_2' />
+                            <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
+                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
-                                <img src="dog.jpg" alt="Dog" />
+                                <img className="img_1"src="sabeehaimg.jpg" alt="Dog" />
                             </div>
                             <h3>Sabeeha Salman</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
-                            <RiInstagramFill className='icon' />
-                            <FaLinkedin className='icon_2' />
+                            <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
+                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
-                                <img src="dog.jpg" alt="Dog" />
+                                <img className="img_1" src="kavindiimg.jpg" alt="Dog" />
                             </div>
                             <h3>Kavindi Ekanayake</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
-                            <RiInstagramFill className='icon' />
-                            <FaLinkedin className='icon_2' />
+                            <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
+                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
-                                <img src="dog.jpg" alt="Dog" />
+                                <img className="img_1"src="piyumikaimg.jpg" alt="Dog" />
                             </div>
                             <h3>Piyumika Thennakoon</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
-                            <RiInstagramFill className='icon' />
-                            <FaLinkedin className='icon_2' />
+                            <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
+                            <a href="https://www.linkedin.com/in/piyumika-thennakoon-110a67263/"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                     </div>
                 </div>
