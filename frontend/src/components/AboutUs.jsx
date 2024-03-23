@@ -62,12 +62,12 @@ function AboutUs() {
                     <div className="boxes-container">
                         <div className="box">
                             <div className="circular-image-container">
-                                <img className="img_1" src="dog.jpg" alt="Dog" />
+                                <img className="img_1" src="vihangaimg.jpg" alt="Dog" />
                             </div>
                             <h3>Vihanga Fernando</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
                             <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
-                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
+                            <a href="http://www.linkedin.com/in/vihanga-nethmina-590522255"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
@@ -76,7 +76,7 @@ function AboutUs() {
                             <h3>Sabeeha Salman</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
                             <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
-                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
+                            <a href="https://www.linkedin.com/in/sabeeha-salman-b12259258/"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
@@ -85,7 +85,7 @@ function AboutUs() {
                             <h3>Kavindi Ekanayake</h3>
                             <p>An Undergraduate Software Engineer at the University of Westminster, excels in programming and thrives on collaborative problem-solving. With a keen eye for detail and a dedication to continuous learning, he's poised to make significant contributions to software engineering.</p>
                             <a href="https://www.instagram.com/"><RiInstagramFill className='icon-new' /></a>
-                            <a href="https://www.instagram.com/your_instagram_profile"><FaLinkedin className='icon_2-new' /></a>
+                            <a href="https://www.linkedin.com/in/kavindi-ekanayake-1b406a298/"><FaLinkedin className='icon_2-new' /></a>
                         </div>
                         <div className="box">
                             <div className="circular-image-container">
