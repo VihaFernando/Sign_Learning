@@ -25,6 +25,7 @@ import Quiz6 from './components/Quiz6';
 import ObjectDetection from './components/objectDetection';
 import ImageClassification from './components/imageClassification';
 
+
 function App() {
   return (
     <Router>
@@ -52,6 +53,7 @@ function App() {
           <Route path="/Quiz6" element={<Quiz6/>}/>
           <Route path="/objectDetection" element={<ObjectDetection/>} />
           <Route path="/imageClassification" element={<ImageClassification/>} />
+          
         </Routes>
       </div>
     </Router>
