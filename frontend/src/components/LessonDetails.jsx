@@ -58,7 +58,7 @@ function LessonDetails() {
 
 	return (
 		<div className="lesson-details">
-			<h2>Lesson Games Details</h2>
+			<h2>Lesson Quizzes Details</h2>
 			<button className="button_1" onClick={handleDeleteOldScore}>
 				Close
 			</button>
