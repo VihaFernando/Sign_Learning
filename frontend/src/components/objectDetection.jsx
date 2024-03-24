@@ -4,6 +4,9 @@ import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import axios from "axios"; // Import Axios
 import { drawRect } from "./utilities";
+import "./objectDetection.css"
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 
 const ObjectDetection = () => {
   const webcamRef = useRef(null);
@@ -118,8 +121,9 @@ const ObjectDetection = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="obj">
+      <MainHeader />
+      <header className="obj-header">
         <Webcam
           ref={webcamRef}
           muted={true}
@@ -193,6 +197,7 @@ const ObjectDetection = () => {
           </div>
         )}
       </header>
+     
     </div>
   );
 };

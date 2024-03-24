@@ -4,6 +4,8 @@ import { DropzoneArea } from "material-ui-dropzone";
 import { Backdrop, Chip, CircularProgress, Grid, Stack } from "@mui/material";
 import {storage, ref, getDownloadURL } from "./firebase"; // Import necessary Firebase storage functions
 import labels from "./imagenet-label.json";
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 
 
 const ImageClassification =()=> {
@@ -105,9 +107,10 @@ const ImageClassification =()=> {
 
   return (
     <Fragment>
+      <MainHeader />
       <Grid container className="App" direction="column" alignItems="center" justifyContent="center" marginTop="12%">
         <Grid item>
-          <h1 style={{ textAlign: "center", marginBottom: "1.5em" }}>Image Classifier</h1>
+          <h1 style={{ textAlign: "center", marginBottom: "1.5em" }}>Image Detection</h1>
           <DropzoneArea
             acceptedFiles={["image/*"]}
             dropzoneText={"Add an image"}
@@ -122,12 +125,7 @@ const ImageClassification =()=> {
           <Stack style={{ marginTop: "2em", width: "12rem" }} direction="row" spacing={1}>
             <Chip
               label={predictedClass === null ? "Prediction:" : `Prediction: ${predictedClass}`}
-              style={{ justifyContent: "left" }}
-              variant="outlined"
-            />
-            <Chip
-              label={confidence === null ? "Confidence:" : `Confidence: ${confidence}%`}
-              style={{ justifyContent: "left" }}
+              style={{ justifyContent: "left"}}
               variant="outlined"
             />
           </Stack>
@@ -177,6 +175,7 @@ const ImageClassification =()=> {
           </button>
         </div>
       )}
+      <Footer />
     </Fragment>
   );
 }
