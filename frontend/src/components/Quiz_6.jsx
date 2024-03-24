@@ -13,6 +13,7 @@ const Quiz = () => {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [timer, setTimer] = useState(50); 
   const [timerRunning, setTimerRunning] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
 
 
@@ -21,6 +22,7 @@ const Quiz = () => {
       setCurrentQuestion(currentQuestion + 1);
       setTimer(50); 
       setTimerRunning(true); 
+      setShowVideo(false);
     } else {
       setQuizCompleted(true);
       const quizNumber = currentQuestion + 1;
@@ -68,6 +70,9 @@ const Quiz = () => {
       setScore(score + 1);
     }
   };
+  const handleWordClick = () => {
+    setShowVideo(true); // Display video when a word is clicked
+};
 
   return (
     <div className='quiz-container-wrapper'>
@@ -78,13 +83,26 @@ const Quiz = () => {
           <div>
             <h3 className='completed-queshion_1'>Quiz Completed</h3>
             <p className='mark'>Total Marks: {score} / {quiz_6.length}</p>
-            <Link to="/LesseonDetails" className="button_1">Check quiz progress</Link>
+            <Link to="/LessonDetails" className="button_1">Check quiz progress</Link>
           </div>
         ) : (
           <div>
             <h3 className='current-queshion'>Question {currentQuestion + 1}</h3>
             <h3 className='main-queshion'>පහත දී ඇති සිoහල සoඤා සoකේතයට අදාළ පාට හෝ සත්වයන් තෝරන්න.</h3>
-            <p className='queshion-type'>{quiz_6[currentQuestion].question}</p>
+            <div className="question-text">
+                                {quiz_6[currentQuestion].question.split(" ").map((word, index) => (
+                                    <span key={index} onClick={handleWordClick}>
+                                        {word}&nbsp;
+                                    </span>
+                                ))}
+                            </div>
+                            {showVideo && (
+                                <div className="video-container">
+                                    <video controls src={quiz_6[currentQuestion].videoURL} className="video" />
+                                    <button onClick={() => setShowVideo(false)} className="close-button">Close</button>
+                                </div>
+                            )}
+
             <div className="options">
               {quiz_6[currentQuestion].options.map((option, index) => (
                 <button

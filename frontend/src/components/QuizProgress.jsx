@@ -22,7 +22,7 @@ const QuizProgress = ({ quizProgress, quizNumber }) => {
 						strokeLinecap: "butt",
 						textSize: "12px",
 						pathTransitionDuration: 0.5,
-						pathColor: `#2596be`,
+						pathColor: `#3E3CDE`,
 						textColor: "#333",
 						trailColor: "#e0e0e0",
 						backgroundColor: "#e0e0e0",

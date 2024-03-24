@@ -4,9 +4,7 @@ const { getDownloadURL} = require('firebase-admin/storage'); // v9 or later (ass
 const router = express.Router();
 const storage = admin.storage();
 
-// Optional Caching (if desired)
 const videoData = {}; // Object to store video URLs (optional caching)
-
 async function getVideoUrl(objTerm) {
   try {
     try {
@@ -26,7 +24,6 @@ async function getVideoUrl(objTerm) {
     throw error; 
   }
 }
-
 router.get('/getVideoURL', async (req, res) => {
   try {
     const objTerm = req.query.objTerm;
