@@ -4,7 +4,9 @@ import MainHeader from "./MainHeader";
 import Footer from "./Footer";
 
 import "./Quiz4.css";
-import { quiz_3 } from "../config/quiz";
+import { quiz_3 } from "../config/quiz"; 
+
+
 
 const Quiz = () => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -13,12 +15,14 @@ const Quiz = () => {
 	const [quizCompleted, setQuizCompleted] = useState(false);
 	const [timer, setTimer] = useState(50);
 	const [timerRunning, setTimerRunning] = useState(false);
+	const [showVideo, setShowVideo] = useState(false);
 
 	const handleNextQuestion = useCallback(() => {
 		if (currentQuestion < quiz_3.length - 1) {
 			setCurrentQuestion(currentQuestion + 1);
 			setTimer(50);
 			setTimerRunning(true);
+			setShowVideo(false);
 		} else {
 			setQuizCompleted(true);
 			const quizNumber = currentQuestion + 1;
@@ -66,6 +70,9 @@ const Quiz = () => {
 			setScore(score + 1);
 		}
 	};
+	const handleWordClick = () => {
+        setShowVideo(true); // Display video when a word is clicked
+    };
 
 	return (
 		<div className="quiz-container-wrapper">
@@ -88,7 +95,22 @@ const Quiz = () => {
 							<h3 className="main-queshion">
 								පහත දී ඇති සිoහල සoඤා සoකේතයට අදාළ මාසය හෝ සතියේ දිනය තෝරන්න.
 							</h3>
-							<p className="queshion-type">{quiz_3[currentQuestion].question}</p>
+							<div className="question-text">
+                                {quiz_3[currentQuestion].question.split(" ").map((word, index) => (
+                                    <span key={index} onClick={handleWordClick}>
+                                        {word}&nbsp;
+                                    </span>
+                                ))}
+                            </div>
+                            {showVideo && (
+                                <div className="video-container">
+                                    <video controls src={quiz_3[currentQuestion].videoURL} className="video" />
+									<button onClick={() => setShowVideo(false)} className="close-button">Close</button>
+                                </div>
+                            )}
+
+
+							
 							<div className="options">
 								{quiz_3[currentQuestion].options.map((option, index) => (
 									<button

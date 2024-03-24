@@ -79,7 +79,7 @@ const Quiz = () => {
           <div>
             <h3 className='completed-queshion_1'>Quiz Completed</h3>
             <p className='mark'>Total Marks: {score} / {quiz_4.length}</p>
-            <Link to="/Quiz5" className="button_1">check quiz progress</Link>
+            <Link to="/LessonDetails" className="button_1">check quiz progress</Link>
           </div>
         ) : (
           <div>

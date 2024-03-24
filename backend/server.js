@@ -18,8 +18,6 @@ initializeApp({
   databaseURL: "https://signlearning-6c06e-default-rtdb.firebaseio.com"
 });
 
-
-
 // Import the router from server1.js
 const server1Router = require('./server1');
 const videoHandlerRouter = require('./videoHandler')
@@ -29,7 +27,6 @@ const server2Router = require('./server2')
 app.use('/', server1Router);
 app.use('/',videoHandlerRouter);
 app.use('/',server2Router);
-
 
 // Start the server
 const port = process.env.PORT || 8000;
