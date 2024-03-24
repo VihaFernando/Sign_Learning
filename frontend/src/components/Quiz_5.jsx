@@ -71,7 +71,7 @@ const Quiz = () => {
     }
   };
   const handleWordClick = () => {
-    setShowVideo(true); // Display video when a word is clicked
+    setShowVideo(true); 
 };
 
   return (
