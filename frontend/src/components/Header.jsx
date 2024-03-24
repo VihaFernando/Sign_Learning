@@ -17,11 +17,10 @@ const Header = () => {
       <div className="menu">
         <a href="/AboutUs">About Us</a>
         <a href="/ContactUs">Contact</a>
-        <button className="login-button" onClick={handleLoginButtonClick}>
-          Login
-        </button>
+        <a href="/login" onClick={handleLoginButtonClick}>Login</a>
+
       </div>
-    </div>
+    </div >
   );
 };
 
