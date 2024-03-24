@@ -125,7 +125,7 @@ const ImageClassification =()=> {
           <Stack style={{ marginTop: "2em", width: "12rem" }} direction="row" spacing={1}>
             <Chip
               label={predictedClass === null ? "Prediction:" : `Prediction: ${predictedClass}`}
-              style={{ justifyContent: "left"}}
+              style={{ display : "flex" ,justifyContent: "left", width: "100%"}}
               variant="outlined"
             />
           </Stack>
@@ -166,7 +166,7 @@ const ImageClassification =()=> {
             }}
             style={{
               position: "absolute",
-              top: "10px",
+              top: "80px",
               right: "10px",
               zIndex: 12,
             }}

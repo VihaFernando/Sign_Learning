@@ -179,9 +179,11 @@ const ObjectDetection = () => {
               onClick={() => setShowVideoPopup(false)}
               style={{
                 position: "absolute",
-                top: "10px",
+                top: "80px",
                 right: "10px",
                 zIndex: 12,
+                color: "pink"
+
               }}
             >
               Close
