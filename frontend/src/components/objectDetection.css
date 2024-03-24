@@ -1,5 +1,7 @@
-.App {
+.obj {
     text-align: center;
+    margin-top: 75px;
+    
   }
   
   .App-logo {
@@ -13,7 +15,7 @@
     }
   }
   
-  .App-header {
+  .obj-header {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -24,7 +26,7 @@
     color: white;
   }
   
-  .App-link {
+  .obj-link {
     color: #61dafb;
   }
   
