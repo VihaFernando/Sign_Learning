@@ -5,6 +5,8 @@ import Footer from './Footer';
 import { storage, ref, getDownloadURL } from './firebase';
 import { Link } from 'react-router-dom';
 
+
+
 const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [videoURL, setVideoUrl] = useState('');
@@ -42,6 +44,11 @@ const Homepage = () => {
     setError('');
     setIsModalOpen(false);
   };
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div>
@@ -60,11 +67,14 @@ const Homepage = () => {
                 className='searchbar'
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleKeyPress} // Call handleKeyPress function on key press
               />
-              <button onClick={handleSearch}>Search</button>
               <Link to='/objectDetection'>
-              <button>Scan Image</button>
+                <button className='scanButton'>Scan Image</button>
               </Link>
+              <Link to='/imageClassification'>
+                <button className='objectButton'>Object</button>
+                </Link>
             </div>
             {error && <div className="error-message">{error}</div>}
           </div>
@@ -81,13 +91,13 @@ const Homepage = () => {
             <video controls>
               <source src={videoURL} type="video/mp4" />
               Your browser does not support the video tag.
-              </video>
-              {searchedWord && (
-                <p className="searched-word">Searched Word: {searchedWord}</p>
-              )}
-              {!searchedWord && (
-                <p className="searched-word">No searched word found</p>
-              )}
+            </video>
+            {searchedWord && (
+              <p className="searched-word">Searched Word: {searchedWord}</p>
+            )}
+            {!searchedWord && (
+              <p className="searched-word">No searched word found</p>
+            )}
           </div>
         </div>
       )}

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link ,useNavigate} from 'react-router-dom'; 
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import backgroundImage from '../assets/bgimage.png';
 import firebase from '../components/firebase'; 
+import { getDatabase, ref, set } from "firebase/database";
 
 
 import './Signup.css';
@@ -15,11 +16,13 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleGoogleSignup = async () => {
         try {
             const provider = new firebase.auth.GoogleAuthProvider();
             await firebase.auth().signInWithPopup(provider);
+            navigate('/home');
         } catch(error) {
             setError(error.message);
         }
@@ -33,14 +36,25 @@ function Signup() {
                 setError("Please enter a valid email address");
                 return;
             }
-            const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
+            const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
             if (user) {
+                writeUserData(user.uid, name, email);
                 alert("Account created successfully");
+                navigate('/home');
             }
         } catch(error) {
             setError(error.message);
         }
     };
+    const writeUserData = (UID, name, email) => {
+        const db = getDatabase();
+        set(ref(db, 'users/' + UID), {
+            username: name,
+            email: email,
+            
+        });
+    }
+
 
     return (
         <div className="bg" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', minHeight: '100vh', minHeight: '100vh', backgroundAttachment: 'fixed' }}>
@@ -99,7 +113,7 @@ function Signup() {
                                 </button>
                             </div>
                             <div className="register-link">
-                                <p>Already have an account? <a href="#">Sign in</a></p>
+                                <p>Already have an account? <a href="./login">Sign in</a></p>
                             </div>
                         </form>
                     </div>

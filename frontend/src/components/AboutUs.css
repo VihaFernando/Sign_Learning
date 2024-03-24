@@ -1,4 +1,4 @@
-/* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,22 +9,21 @@ body {
     background-color: #eeeeee;
 }
 
-
-h1 {
-    margin-top: 5%;
-    margin-bottom: 1%;
+.about_topic {
+    margin-top: 9%;
     font-size: 3rem; 
     font-weight: 700;
     text-align: center;
-    color:white;
+    color:rgb(80, 77, 244);
 }
+.img_des{
+    position: relative;
+    top: -60px;
+}
+
 
 h2 {
     text-align: center;
-}
-
-body {
-    background-color: #D9D9D9;
 }
 
 
@@ -38,12 +37,14 @@ body {
 .image-frame {
     width: 50%;
     margin-right: 20px;
+    position: relative;
 }
 
 .left-image {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    position: relative;
 }
 
 .description-box {
@@ -79,6 +80,7 @@ body {
 .learn-more-button {
     display: block;
     margin: 20px auto; 
+    font-size: 15px;
 }
 
 .learn-more-button button {
@@ -91,6 +93,10 @@ body {
     width: auto;
     display: inline-block; 
     margin-top: 20px; 
+}
+.learn-more-button:active{
+    background-color: #657EFC;
+
 }
 
 
@@ -134,6 +140,7 @@ body {
     margin-top: 20px;
     width: 100%;
     text-align: center;
+    font-size: 15px;
 }
 
 .show-more-button button {
@@ -146,6 +153,9 @@ body {
     width: auto;
     display: inline-block; 
     margin-top: 20px; 
+}
+.show-more-button:active{
+color: #657EFC;
 }
 
 
@@ -206,15 +216,17 @@ body {
 .circular-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    position: relative;
     border-radius: 50%;
+    bottom: 67%;
+    object-fit: cover;
 }
 
 .box p {
     color: #000;
     font-size: 11px;
     position: absolute;
-    bottom: 40px;
+    bottom: 65px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -232,9 +244,20 @@ body {
 }
 
 
-.icon,
-.icon_2 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #3E3CDE
+.icon-new {
+    position: absolute;
+    bottom: 15px;
+    left: calc(43% - 20px);
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+}
+
+.icon_2-new {
+    position: absolute;
+    bottom: 15px;
+    left: calc(47% + 20px); 
+    display: flex;
+    font-size: 27px;
+    align-items: center;
 }
