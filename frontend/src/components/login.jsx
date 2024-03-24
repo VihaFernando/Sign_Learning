@@ -21,7 +21,6 @@ const Login = () => {
  
     signInWithEmailAndPassword(auth,email,password)
       .then((userCredential) => {
-        // You might want to do something with userCredential.user
         console.log(userCredential.user);
         alert('User logged in successfully');
         alert(`Welcome, ${user.email}`);
@@ -64,8 +63,6 @@ const Login = () => {
       const user = result.user;
       
       setEmail(user.email);
-      
-      
 
       alert('User signed in with Google successfully');
       // Redirect or do something after successful login
