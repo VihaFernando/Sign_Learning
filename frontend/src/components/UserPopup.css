@@ -9,10 +9,10 @@
     border: 1px solid #ccc;
     z-index: 1100;
     padding-top: 4%;
-    
-    
-    
-    
+
+
+
+
 }
 
 .close-icon {
@@ -33,7 +33,7 @@
 
 .action-buttons {
     margin-top: 20px;
-    
+
 }
 
 .sign-out,
@@ -49,19 +49,20 @@
     justify-content: initial;
     transition: background-color 0.3s;
     margin-bottom: 3%;
-    
+
 }
 
 .sign-out:hover,
 .delete-account:hover {
-    background-color:rgb(28, 166, 221);
+    background-color: rgb(28, 166, 221);
 }
 
 .user-details {
-    
+
     text-align: left;
 }
 
 .user-details p {
     margin: 8px 0;
+    color: black;
 }
