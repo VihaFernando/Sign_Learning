@@ -1,55 +1,46 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import MainHeader from './MainHeader';
-import Footer from './Footer';
-import './Quiz.css';
-;
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
+
+import "./Quiz4.css";
+import { quiz_4 } from "../config/quiz"; 
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const [timer, setTimer] = useState(50);
+  const [timer, setTimer] = useState(50); 
   const [timerRunning, setTimerRunning] = useState(false);
 
-  const quizData = [
-    {
-        question: '"අoක 0" ',
-        options: ['number_0.2.png', 'number_0.1.png', 'number_0.png', 'number_3.png'],
-        correctAnswer: 'number_0.png' 
-      },
-      {
-        question: '"අoක 7" ',
-        options: ['number_7.1.png', 'number-7.png', 'number7.2.png', 'number7.4.png'],
-        correctAnswer: 'number-7.png' 
-      },
-      {
-        question: '"අoක 1" ',
-        options: ['number_1.2.png', 'number_1.1.png', 'number_1.3.png', 'number_1.png'],
-        correctAnswer: 'number_1.png' 
-      }, 
-      {
-        question: '"අoක 3" ',
-        options: ['number-3.png', 'number_3.2.png', 'number_3.3.png', 'number_3.png'],
-        correctAnswer: 'number-3.png' 
-      },
-      {
-        question: '"අoක 9 " ',
-        options: ['number9-1.png', 'number-9.png', 'number-9.3.png', 'number-9.2.png'],
-        correctAnswer: 'number-9.png' 
-      },
-  ];
+
 
   const handleNextQuestion = useCallback(() => {
-    if (currentQuestion < quizData.length - 1) {
+    if (currentQuestion < quiz_4.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-      setTimer(50);
-      setTimerRunning(true);
+      setTimer(50); 
+      setTimerRunning(true); 
     } else {
       setQuizCompleted(true);
+      const quizNumber = currentQuestion + 1;
+			fetch(`${process.env.REACT_APP_API_URL}/api/quiz-results?userId=yourUserId&quizNumber=${quizNumber}`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					quizNumber: "quiz4",
+					score,
+					totalQuestions: quiz_4.length,
+				}),
+			})
+				.then((response) => response.json())
+				.then((data) => console.log(data))
+				.catch((error) => console.error("Error:", error));
     }
-  }, [currentQuestion, quizData.length]);
+  }, [currentQuestion, quiz_4.length]);
 
   useEffect(() => {
     let intervalId;
@@ -67,7 +58,7 @@ const Quiz = () => {
   }, [timer, timerRunning, handleNextQuestion]);
 
   const handleAnswerClick = (selectedAnswer) => {
-    const currentQuestionData = quizData[currentQuestion];
+    const currentQuestionData = quiz_4[currentQuestion];
     const correctAnswer = currentQuestionData.correctAnswer;
     const isCorrect = selectedAnswer === correctAnswer;
 
@@ -81,22 +72,22 @@ const Quiz = () => {
 
   return (
     <div className='quiz-container-wrapper'>
-        <MainHeader/>
+       <MainHeader/>
     <div className="quiz-container">
       <div className="quiz-box">
         {quizCompleted ? (
           <div>
-            <h3 className='completed-tag'>Quiz Completed</h3>
-            <p className='marks'>Total Marks: {score} / {quizData.length}</p>
-            <Link to="/Level3" className="button_1">Next Page</Link>
+            <h3 className='completed-queshion_1'>Quiz Completed</h3>
+            <p className='mark'>Total Marks: {score} / {quiz_4.length}</p>
+            <Link to="/LessonDetails" className="button_1">check quiz progress</Link>
           </div>
         ) : (
           <div>
-            <h3 className='Queshion-tag'>Question {currentQuestion + 1}</h3>
-            <h4 className='big-queshion'>අකුරට අදාළ සoකේතය තෝරන්න.</h4>
-            <p className='queshions'>{quizData[currentQuestion].question}</p>
+            <h3 className='current-queshion'>Question {currentQuestion + 1}</h3>
+            <h3 className='main-queshion'>පහත දී ඇති සිoහල සoඤා සoකේතයට අදාළ ක්‍රියාපදය තෝරන්න.</h3>
+            <p className='queshion-type'>{quiz_4[currentQuestion].question}</p>
             <div className="options">
-              {quizData[currentQuestion].options.map((option, index) => (
+              {quiz_4[currentQuestion].options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(option)}
@@ -110,8 +101,8 @@ const Quiz = () => {
                   }
                   disabled={answers.length > currentQuestion}
                 >
-                  <img src={option} alt={`Option ${index}`} />
-                  {answers.length > currentQuestion && !answers[currentQuestion].isCorrect && option === quizData[currentQuestion].correctAnswer && <span className="correct-answer-indicator">Correct Answer</span>}
+                  {option} 
+                  {answers.length > currentQuestion && !answers[currentQuestion].isCorrect && option === quiz_4[currentQuestion].correctAnswer && <span className="correct-answer-indicator">Correct Answer</span>}
                 </button>
               ))}
             </div>
@@ -123,7 +114,7 @@ const Quiz = () => {
         )}
       </div>
     </div>
-    <Footer/>
+  <Footer/>
     </div>
   );
 };
