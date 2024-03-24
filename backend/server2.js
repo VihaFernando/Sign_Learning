@@ -4,12 +4,7 @@ const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
 const router = express.Router();
 
-
-
-
 const db = admin.firestore();
-
-
 router.use(bodyParser.json());
 router.use(
 	cors({
@@ -17,7 +12,6 @@ router.use(
 		optionsSuccessStatus: 200,
 	})
 );
-
 router.post("/api/quiz-results", async (req, res) => {
 	try {
 		const { score, totalQuestions, quizNumber } = req.body;
@@ -30,13 +24,11 @@ router.post("/api/quiz-results", async (req, res) => {
 			{ name: "quizNumber", value: quizNumber },
 			{ name: "userId", value: userId },
 		];
-
 		for (let data of requiredData) {
 			if (data.value === null || data.value === undefined) {
 				return res.status(400).json({ message: `Missing required data: ${data.name}` });
 			}
 		}
-
 		await db
 			.collection("quizProgress")
 			.doc(userId)
@@ -50,14 +42,12 @@ router.post("/api/quiz-results", async (req, res) => {
 				},
 				{ merge: true }
 			);
-
 		res.status(200).json({ message: "Quiz results saved" });
 	} catch (error) {
 		console.error("Error saving quiz results:", error);
 		res.status(500).json({ message: "Internal server error" });
 	}
 });
-
 router.get("/api/quiz-progress", async (req, res) => {
 	try {
 		const userId = req.query.userId;

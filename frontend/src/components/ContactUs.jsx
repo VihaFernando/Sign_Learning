@@ -16,16 +16,12 @@ const ContactUs = () => {
       </div>
 
       <div className="contact-options">
-        <ContactOption
-          title="Fill Out the Form"
-          description="Send us a message using the form below. We'll get back to you as soon as possible!"
-          linkText="Contact Form"
-          linkTo="/contact-form"
-        />
-        <ContactOption
-          title="Send us an Email"
-          description="Prefer email? Reach out to us at signlearning@gmail.com and we'll assist you promptly."
-        />
+        
+       <ContactOption
+           title="Send us an Email"
+           description={<p>Prefer email? Reach out to us at <a href="mailto:signlearning@gmail.com">signlearning@gmail.com</a> and we'll assist you promptly.</p>}
+          />
+
         <ContactOption
           title="Connect on Social Media"
           description="Join our community on Facebook and Instagram for updates and exclusive content."

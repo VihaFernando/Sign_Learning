@@ -56,27 +56,32 @@ export const quiz_2 = [
 
 export const quiz_3 = [
 	{
-		question: '"june.mp4 " ',
+		question: '"මාසය"',
+		videoURL: "./June.mp4",
 		options: ["මාර්තු මාසය", "ජනවාරි මාසය", "පෙබරවාරි මාසය ", "ජූනි මාසය "],
 		correctAnswer: "ජූනි මාසය ",
 	},
 	{
 		question: '"මාසය" ',
+		videoURL: "./January.mp4",
 		options: ["පෙබරවාරි මාසය", "අප්‍රේල් මාසය", "ජනවාරි මාසය", "ජුලි මාසය"],
 		correctAnswer: "ජනවාරි මාසය",
 	},
 	{
 		question: '"මාසය" ',
+		videoURL: "./December.mp4",
 		options: ["දෙසම්බර් මාසය", "නොවෙම්බර් මාසය", "මාර්තු මාසය", "අගෝස්තු මාසය "],
 		correctAnswer: "දෙසම්බර් මාසය",
 	},
 	{
 		question: '"දිනය" ',
+		videoURL: "./Monday.mp4",
 		options: ["සෙනසුරාදා", "ඉරිදා", "සදුදා", "අගහරුවදා"],
 		correctAnswer: "සදුදා",
 	},
 	{
 		question: '"දිනය" ',
+		videoURL: "./Friday.mp4",
 		options: ["ඉරිදා", "අගහරුවදා", "බ්‍රහස්පතින්දා", "සිකුරාදා"],
 		correctAnswer: "සිකුරාදා",
 	},
@@ -112,26 +117,31 @@ export const quiz_4 = [
   export const quiz_5 = [
     {
         question: '"පවුලේ සාමාජිකයා" ',
+        videoURL: "./Amma.mp4",
         options: ['ආච්චි', 'තාත්තා ', 'අම්මා', 'නංගි'],
         correctAnswer: 'අම්මා' 
       },
       {
         question: '"පවුලේ සාමාජිකයා" ',
+        videoURL: "./Nangi.mp4",
         options: ['සීයා', 'නංගි', 'අයියා', 'අක්කා'],
         correctAnswer: 'නංගි' 
       },
       {
         question: '"පවුලේ සාමාජිකයා" ',
+        videoURL: "./Thaththa.mp4",
         options: ['මල්ලි', 'අක්කා', 'අම්මා', 'තාත්තා'],
         correctAnswer: 'තාත්තා' 
       }, 
       {
         question: '"පවුලේ සාමාජිකයා ',
+        videoURL: "./Nanda.mp4",
         options: ['මාමා', 'තාත්තා', 'නැන්දා', 'අක්කා'],
         correctAnswer: 'නැන්දා' 
       },
       {
         question: '"පවුලේ සාමාජිකයා" ',
+        videoURL: "./Grandma.mp4",
         options: ["ආච්චි", 'අක්කා', 'අයියා', ' සීයා'],
         correctAnswer: 'ආච්චි' 
       }, 
@@ -140,26 +150,31 @@ export const quiz_4 = [
   export const quiz_6 = [
     {
         question: '"සත්වයා" ',
+        videoURL: "./Dog.mp4",
         options: ['කුරුල්ලා ', 'අලියා', 'බල්ලා ', ' පූසා'],
         correctAnswer: 'බල්ලා '
       },
       {
         question: '"සත්වයා" ',
+        videoURL: "./Cat.mp4",
         options: ['පූසා', 'නයා', 'අලියා', 'බල්ලා'],
         correctAnswer: 'පූසා' 
       },
       {
         question: '"සත්වයා" ',
+        videoURL: "./Lion.mp4",
         options: ['අලියා', 'හාවා', 'නයා', 'සිoහයා'],
         correctAnswer: 'සිoහයා' 
       }, 
       {
         question: '"පාට" ',
+        videoURL: "./Rose.mp4",
         options: ['සුදු ', 'රෝස', 'කොළ', 'කහ'],
         correctAnswer: 'රෝස' 
       },
       {
         question: '"පාට" ',
+        videoURL: "./Red.mp4",
         options: ["රතු", 'සුදු', 'නිල්', 'කොළ'],
         correctAnswer: 'රතු' 
       }, 
