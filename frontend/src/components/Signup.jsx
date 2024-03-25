@@ -7,6 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import backgroundImage from '../assets/bgimage.png';
 import firebase from '../components/firebase'; 
 import { getDatabase, ref, set } from "firebase/database";
+import { getAuth } from 'firebase/auth';
 
 
 import './Signup.css';
@@ -38,7 +39,7 @@ function Signup() {
             }
             const user = await firebase.auth().createUserWithEmailAndPassword(email,password);
             if (user) {
-                writeUserData(user.uid, name, email);
+                writeUserData(name, email);
                 alert("Account created successfully");
                 navigate('/home');
             }
@@ -46,6 +47,7 @@ function Signup() {
             setError(error.message);
         }
     };
+    /*
     const writeUserData = (UID, name, email) => {
         const db = getDatabase();
         set(ref(db, 'users/' + UID), {
@@ -54,6 +56,29 @@ function Signup() {
             
         });
     }
+    */
+    const writeUserData = (name, email) => {
+        const auth = getAuth();
+        const user = auth.currentUser;
+    
+        if (user) {
+            const UID = user.uid;
+            const db = getDatabase();
+            set(ref(db, 'users/' + UID), {
+                username: name,
+                email: email,
+                
+            })
+            .then(() => {
+                console.log('User data written successfully.');
+            })
+            .catch((error) => {
+                console.error('Error writing user data:', error);
+            });
+        } else {
+            console.error('No user signed in.');
+        }
+    };
 
 
     return (
