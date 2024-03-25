@@ -3,23 +3,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import './MainHeader.css';
-import UserPopup from './UserPopup';
+
 
 const MainHeader = () => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const navigate = useNavigate();
-
-    const handleUserIconClick = () => {
-        setIsPopupOpen(true);
-    };
-
-    const handleClosePopup = () => {
-        setIsPopupOpen(false);
-    };
-
-    const handleSignOutClick = () => {
-    navigate('/login');
-    };
 
     const handleDeleteAccount = () => {
         // Implement your delete account logic here
@@ -35,17 +21,11 @@ const MainHeader = () => {
                 <Link to="/home">Home</Link>
                 <Link to="/lessons">Lessons</Link>
                 <Link to="/AboutUs">About Us</Link>
-                <div className="user-icon" onClick={handleUserIconClick}>
+                <div className="user-icon">
                     <FaUserCircle size={28} />
                 </div>
             </div>
-            {isPopupOpen && (
-                <UserPopup
-                    onClose={handleClosePopup}
-                    onSignOut={handleSignOutClick}
-                    onDeleteAccount={handleDeleteAccount}
-                />
-            )}
+
         </div>
     );
 };

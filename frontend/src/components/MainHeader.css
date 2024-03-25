@@ -30,5 +30,10 @@ span {
   margin-right: 20px;
   /* Adjust the spacing between links */
   text-decoration: none;
+  transition: color 0.3s ease;
   color: white;
+}
+
+.navigation a:hover {
+    color: #666; /* Change color on hover */
 }
