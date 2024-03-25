@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-
+import MainHeader from "./MainHeader";
+import Footer from "./Footer";
 import "./Quiz.css";
 import { quiz_1 } from "../config/quiz";
 
@@ -67,6 +68,7 @@ const Quiz = () => {
 
 	return (
 		<div className="quiz-container-wrapper">
+			<MainHeader/>
 			<div className="quiz-container">
 				<div className="quiz-box">
 					{quizCompleted ? (
@@ -116,6 +118,7 @@ const Quiz = () => {
 					)}
 				</div>
 			</div>
+			<Footer/>
 		</div>
 	);
 };

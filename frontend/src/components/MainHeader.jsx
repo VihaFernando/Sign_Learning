@@ -34,7 +34,7 @@ const MainHeader = () => {
             <div className="navigation">
                 <Link to="/home">Home</Link>
                 <Link to="/lessons">Lessons</Link>
-                <Link to="/progress">Dashboard</Link>
+                <Link to="/AboutUs">About Us</Link>
                 <div className="user-icon" onClick={handleUserIconClick}>
                     <FaUserCircle size={28} />
                 </div>

@@ -1,4 +1,4 @@
-/* Reset CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -247,7 +247,7 @@ color: #657EFC;
 .icon-new {
     position: absolute;
     bottom: 15px;
-    left: calc(43% - 20px); /* Adjust as needed */
+    left: calc(43% - 20px);
     display: flex;
     font-size: 30px;
     align-items: center;
@@ -256,7 +256,7 @@ color: #657EFC;
 .icon_2-new {
     position: absolute;
     bottom: 15px;
-    left: calc(47% + 20px); /* Adjust as needed */
+    left: calc(47% + 20px); 
     display: flex;
     font-size: 27px;
     align-items: center;

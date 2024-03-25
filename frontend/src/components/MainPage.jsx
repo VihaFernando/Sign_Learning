@@ -27,7 +27,7 @@ const MainPage = () => {
                 </div>
                 <div className={`action-buttons ${animationDone ? 'animate' : ''}`}>
                     <Link to="/signup">
-                        <button className='signinbtn'>Sign In</button>
+                        <button className='signinbtn'>Sign Up</button>
                     </Link>
                 </div>
             </div>
