@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "react-circular-progressbar/dist/styles.css"; // Import the styles
+import "react-circular-progressbar/dist/styles.css"; 
 
 import "./LessonDetails.css";
 import QuizProgress from "../components/QuizProgress";
