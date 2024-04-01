@@ -22,9 +22,9 @@ jobs:
       - name: Install dependencies on frontend
         run: cd frontend && npm install --force
       - name: Build
-        run: cd frontend npm run build --if-present
+        run: cd frontend && npm run build --if-present
       - name: Install dependencies on backend
         run: cd backend && npm install
       - name: Build
-        run: cd backend npm run build --if-present
+        run: cd backend npm && run build --if-present
 
