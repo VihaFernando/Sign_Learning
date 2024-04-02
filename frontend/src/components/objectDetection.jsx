@@ -15,6 +15,16 @@ const ObjectDetection = () => {
   const [showVideoPopup, setShowVideoPopup] = useState(false);
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
 
+  // Main function
+  const runCoco = async () => {
+    const net = await cocossd.load();
+    console.log("COCO-SSD model loaded.");
+    // Loop and detect objects
+    setInterval(() => {
+      detect(net);
+    }, 10);
+  };
+
   useEffect(() => {
     async function initializeTensorFlow() {
       try {
@@ -105,24 +115,10 @@ const ObjectDetection = () => {
     }
   };
 
-  // // Main function
-  // const runCoco = async () => {
-  //   const net = await cocossd.load();
-  //   console.log("COCO-SSD model loaded.");
-  //   // Loop and detect objects
-  //   setInterval(() => {
-  //     detect(net);
-  //   }, 10);
-  // };
-
-  // const handleClickOpen = useCallback(() => {
-  //   runCoco(true)
-  // }, [])
-
-  // // Run the COCO-SSD model on component mount
-  // useEffect(() => {
-  //   handleClickOpen();
-  // }, [handleClickOpen]);
+  // Run the COCO-SSD model on component mount
+  useEffect(() => {
+    runCoco();
+  }, [runCoco]);
 
   return (
     <div className="obj">
