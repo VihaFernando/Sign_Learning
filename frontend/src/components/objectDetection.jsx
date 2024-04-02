@@ -15,16 +15,6 @@ const ObjectDetection = () => {
   const [showVideoPopup, setShowVideoPopup] = useState(false);
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
 
-  // Main function
-  const runCoco = async () => {
-    const net = await cocossd.load();
-    console.log("COCO-SSD model loaded.");
-    // Loop and detect objects
-    setInterval(() => {
-      detect(net);
-    }, 10);
-  };
-
   useEffect(() => {
     async function initializeTensorFlow() {
       try {
@@ -83,7 +73,7 @@ const ObjectDetection = () => {
       if (!obj || !obj.length || !obj[0]?.class) {
         console.log("No objects detected or class property missing");
         setVideoUrl("");
-        setIsPlayingVideo(false); 
+        setIsPlayingVideo(false);
         return; // Exit the function if no valid object is found
       }
 
@@ -102,7 +92,7 @@ const ObjectDetection = () => {
       ) {
         setVideoUrl(response.data.videoURL);
         setShowVideoPopup(true);
-        setIsPlayingVideo(true); 
+        setIsPlayingVideo(true);
       } else {
         console.error("Failed to fetch video URL:", response);
         setVideoUrl("");
@@ -115,10 +105,24 @@ const ObjectDetection = () => {
     }
   };
 
-  // Run the COCO-SSD model on component mount
-  useEffect(() => {
-    runCoco();
-  }, [runCoco]);
+  // // Main function
+  // const runCoco = async () => {
+  //   const net = await cocossd.load();
+  //   console.log("COCO-SSD model loaded.");
+  //   // Loop and detect objects
+  //   setInterval(() => {
+  //     detect(net);
+  //   }, 10);
+  // };
+
+  // const handleClickOpen = useCallback(() => {
+  //   runCoco(true)
+  // }, [])
+
+  // // Run the COCO-SSD model on component mount
+  // useEffect(() => {
+  //   handleClickOpen();
+  // }, [handleClickOpen]);
 
   return (
     <div className="obj">
@@ -199,7 +203,7 @@ const ObjectDetection = () => {
           </div>
         )}
       </header>
-     
+
     </div>
   );
 };
