@@ -118,7 +118,7 @@ const ObjectDetection = () => {
   // Run the COCO-SSD model on component mount
   useEffect(() => {
     runCoco();
-  }, []);
+  }, [runCoco]);
 
   return (
     <div className="obj">
