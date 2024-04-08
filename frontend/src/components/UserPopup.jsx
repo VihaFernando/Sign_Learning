@@ -34,8 +34,8 @@ const UserPopup = ({ onClose, onSignOut, onDeleteAccount }) => {
                     <FaUserCircle size={48} />
                 </div>
                 <div className="user-details">
-                    <p>Email: {userData?.email}</p>
-                    <p>Username: {userData?.username}</p>
+                    <p>{userData?.username}</p>
+                    <p>{userData?.email}</p>
                 </div>
             </div>
             <div className="action-buttons">
@@ -44,10 +44,6 @@ const UserPopup = ({ onClose, onSignOut, onDeleteAccount }) => {
                     <FaSignOutAlt /> Sign Out
                 </button>
                 </Link>
-                
-                <button className="delete-account" onClick={onDeleteAccount}>
-                    <FaTrash /> Delete Account
-                </button>
                 
             </div>
         </div>

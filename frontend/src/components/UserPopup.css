@@ -31,33 +31,6 @@
 
 }
 
-.action-buttons {
-    margin-top: 20px;
-
-}
-
-.sign-out,
-.delete-account {
-    padding: 8px 16px;
-    margin-right: 10px;
-    cursor: pointer;
-    background-color: #2E5DA3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    justify-content: initial;
-    transition: background-color 0.3s;
-    margin-bottom: 3%;
-    z-index: 12;
-
-}
-
-.sign-out:hover,
-.delete-account:hover {
-    background-color: rgb(28, 166, 221);
-}
-
 .user-details {
 
     text-align: left;
@@ -66,4 +39,31 @@
 .user-details p {
     margin: 8px 0;
     color: black;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    /* Add this to ensure proper alignment of buttons */
+    justify-content: flex-start;
+    /* Adjust alignment of buttons */
+}
+
+.sign-out {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #2E5DA3;
+    color: white;
+    /* Change text color to white for better visibility */
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-bottom: 3%;
+
+}
+
+.sign-out:hover {
+    background-color: #1ca6dd;
+    /* Adjust hover color */
 }
